@@ -26,10 +26,17 @@
 
 ### Out of Scope
 
-- Training from scratch (focus on fine-tuning and alignment)
 - Multi-modal capabilities
 - Real-time streaming inference (batch processing focus)
 - Cloud-specific managed services (self-hosted infrastructure)
+
+### Base Model Strategy (To Be Resolved)
+
+MLA uses non-standard weight matrices incompatible with standard pre-trained checkpoints (Llama, Mistral, etc.).
+The original "training from scratch" exclusion needs revision given this constraint. Options under consideration:
+- **(a)** Start from DeepSeek released MLA checkpoints (if available at 1B scale)
+- **(b)** Distill from a standard model into MLA architecture (requires training MLA layers from scratch)
+- **(c)** Pre-train MLA from random initialization (full pre-training run)
 
 ## Success Criteria
 

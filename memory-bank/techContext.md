@@ -185,7 +185,7 @@ kubectl get pods -n infinitecontext
 
 ### Inference Performance
 
-- **Latency**: <100ms for 128k context on RTX 2070 Super
+- **Decode Latency**: <100ms per token for 128k context on RTX 2070 Super
 - **Throughput**: 10+ tokens/sec per GPU
 - **Memory**: <8GB VRAM for 128k context with MLA
 

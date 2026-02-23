@@ -122,6 +122,7 @@
 2. **DPO Data Generation**: Optimal "Needle-in-Haystack" parameters for long-context training (Phase 5)
 3. **vLLM Integration**: Custom attention backend vs adapter pattern (Phase 6)
 4. **Quantization Strategy**: INT8 vs FP8 for production deployment (Phase 6)
+5. **Base Model Strategy**: MLA weight matrices are incompatible with standard pre-trained models. Need to decide: use DeepSeek checkpoints (if available at 1B scale), distill from a standard model, or pre-train from scratch. This affects the "training from scratch is out of scope" constraint.
 
 ### Blockers and Risks
 

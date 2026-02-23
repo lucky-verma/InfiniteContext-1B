@@ -169,15 +169,15 @@
 | PyTorch DDP (Gloo) | 4h 12m | 65% | Baseline |
 | PyTorch FSDP (NCCL) | 2h 45m | 92% | Target |
 
-*Benchmarked on 4x NVIDIA A100 (40GB) with synthetic 32k context data*
+*Target benchmarks on 4x NVIDIA A100 (40GB) with synthetic 32k context data*
 
 ### Inference Performance (Target)
 
-| Architecture | Context Length | Memory (KV Cache) | Hardware | Status |
-|--------------|----------------|-------------------|----------|--------|
-| Llama-3 (Standard) | 128k | OOM (32GB+) | A100-40GB | Baseline |
-| InfiniteContext (MLA) | 128k | ~4.1GB | RTX 2070 Super | Target |
-| InfiniteContext (MLA) | 1M | ~32GB | A100-80GB | Target |
+| Architecture | Context Length | KV Cache | Total VRAM (est.) | Hardware | Status |
+|--------------|----------------|----------|-------------------|----------|--------|
+| Llama-2 MHA (Baseline) | 128k | ~16.4 GB | OOM | A100-40GB | Baseline |
+| InfiniteContext (MLA) | 128k | ~1.0 GB | ~4 GB | RTX 2070 Super | Target |
+| InfiniteContext (MLA) | 1M | ~8.0 GB | ~11 GB | A100-80GB | Target |
 
 ### Memory Usage (Target)
 
@@ -196,7 +196,7 @@
 | **128k** | OOM | **Target: 90%+** | **Target** |
 | **1M** | OOM | **Target: 85%+** | **Target** |
 
-*Validation in progress; final results will include heatmap visualization*
+*Targets are aspirational; published 1B-class models have not been validated at these context lengths. Results will depend on DPO training effectiveness and compression ratio selection. Final results will include heatmap visualization.*
 
 ## Next Milestones
 
