@@ -1,0 +1,9 @@
+# InfiniteContext-1B Dependencies
+# Phase 0: Foundation
+torch>=2.4.0
+triton>=3.0.0
+einops
+
+# Phase 2: Experiment Tracking (uncomment when needed)
+# wandb
+# mlflow
