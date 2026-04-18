@@ -210,3 +210,14 @@ __marimo__/
 .serena/
 .code-review-graph/
 .superpowers/
+
+# === Claude Code runtime + multi-session state (added 2026-04-18) ===
+# See ~/.claude/rules.md §Multi-Session Git Discipline
+.claude/worktrees/
+.claude/handoffs/
+.claude/scheduled_tasks.lock
+.claude/settings.local.json
+.claude/cache/
+.claude/backups/
+CLAUDE.local.md
+.ccmanager.json
