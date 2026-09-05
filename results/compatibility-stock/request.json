@@ -1,0 +1,9 @@
+{
+  "prompt": "Continue a numbered list of simple observations about the weather:\n1.",
+  "n_predict": 1536,
+  "temperature": 0,
+  "seed": 42,
+  "ignore_eos": true,
+  "stream": true,
+  "n_keep": 4
+}

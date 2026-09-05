@@ -1,0 +1,10 @@
+<workspace>/.venv/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:279: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:81.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+{"step": 1, "loss": 3.7075235843658447, "gradient_norm": 1.5937992334365845, "tokens": 16, "scored_tokens": 16, "seconds": 0.3253121960005956}
+{"step": 2, "loss": 3.6596145629882812, "gradient_norm": 1.5905860662460327, "tokens": 16, "scored_tokens": 16, "seconds": 0.01148108800407499}
+{"step": 3, "loss": 3.8024423122406006, "gradient_norm": 1.5939561128616333, "tokens": 16, "scored_tokens": 16, "seconds": 0.010702803992899135}
+{"step": 4, "loss": 3.7062573432922363, "gradient_norm": 1.645845890045166, "tokens": 16, "scored_tokens": 16, "seconds": 0.010500268996111117}
+{"step": 5, "loss": 3.3753433227539062, "gradient_norm": 1.4968910217285156, "tokens": 16, "scored_tokens": 16, "seconds": 0.011317889002384618}
+{"step": 6, "loss": 3.6259372234344482, "gradient_norm": 1.4975546598434448, "tokens": 16, "scored_tokens": 16, "seconds": 0.011523979002959095}
+{"step": 7, "loss": 3.3750126361846924, "gradient_norm": 1.5192763805389404, "tokens": 16, "scored_tokens": 16, "seconds": 0.010949029994662851}
+{"step": 8, "loss": 3.5935611724853516, "gradient_norm": 1.5647308826446533, "tokens": 16, "scored_tokens": 16, "seconds": 0.010370092990342528}

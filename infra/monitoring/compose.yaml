@@ -1,0 +1,20 @@
+services:
+  prometheus:
+    image: prom/prometheus@sha256:5ce7540c3c00ef4ab0c9d2c995c6a5b9c421f44b4a115d97a2c7af3b1c21cbb0
+    user: '10001:10001'
+    ports:
+      - '127.0.0.1:${IC_PROM_PORT:-19090}:9090'
+    volumes:
+      - ../infra/monitoring/prometheus.yaml:/etc/prometheus/prometheus.yml:ro
+      - sessions:/state:ro
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/tmp/prometheus
+      - --storage.tsdb.retention.time=1h
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs:
+      - /tmp:size=128m,uid=10001,gid=10001
+    mem_limit: 256m
+    cpus: 0.5

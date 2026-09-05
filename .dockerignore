@@ -1,0 +1,15 @@
+*
+!scripts/
+!scripts/build_runtime.py
+!scripts/fetch_model.py
+!serving/
+!serving/Dockerfile
+!serving/run.py
+!serving/model.json
+!serving/runtime.json
+!patches/
+!patches/llama.cpp/
+!patches/llama.cpp/streaming-context.patch
+!patches/llama.cpp/LICENSE
+!streaming/
+!streaming/*.py

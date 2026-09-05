@@ -76,7 +76,8 @@ method and validate its transfer to the selected model/runtime.
 
 ## GPU kernels
 
-Triton RoPE, RMSNorm, and fused MLA decoding remain planned components. Keep a
+Triton RoPE, RMSNorm, and fused latent decoding have numerical reference
+implementations. GPU qualification and integration remain open. Keep a
 PyTorch reference for numerical and gradient checks where relevant. Test
 supported shapes, lengths, dtypes, layouts, masking, and boundary conditions.
 
@@ -103,7 +104,9 @@ Prometheus service monitoring. The full protocol is in
 
 ## Serving and operations
 
-vLLM integration is the serving target, including model identity, bounded
+The validated native service is a single-session reference; the custom MLA
+checkpoint also has a bounded MLflow next-token endpoint. vLLM integration is
+the production batching target, including model identity, bounded
 requests/concurrency, streaming output, batching, KV behavior, and error paths.
 Other maintained runtimes can provide comparisons and compatibility probes.
 A successful alternate-runtime probe does not establish vLLM integration.

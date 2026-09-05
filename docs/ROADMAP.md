@@ -1,8 +1,8 @@
 # Full-system roadmap and scope coverage
 
 This roadmap preserves the complete end-to-end project. Work is sequenced by
-dependencies and validated artifacts. Personal schedules are maintained outside
-the public repository.
+dependencies and validated artifacts; [STATUS.md](STATUS.md) identifies the
+implemented components and their remaining qualification work.
 
 ## Scope inventory
 

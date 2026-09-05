@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "stages": [
+    "pretrain",
+    "sft",
+    "dpo",
+    "held-out evaluation",
+    "offline W&B",
+    "local MLflow",
+    "registry promotion",
+    "HTTP prediction",
+    "registry rollback/reload"
+  ],
+  "evaluations": {
+    "pretrain": {
+      "status": "passed",
+      "checkpoint_sha256": "6cb4beb5e99535713a7173fc06791ccfdedc03ff1f11509f74e4ed3cf07b0a11",
+      "evaluation_data_sha256": "a90ba7e2f054a3fc9d87edf577f4c97cc2f72f1560afee8accbbeeb1ebf49839",
+      "training_data_sha256": "ac51955d35db26ab1b8ef3b1dcc95609b993059f02404b3ca7a4b17a531f7015",
+      "tokens_scored": 256,
+      "mean_nll": 3.6015920639038086,
+      "perplexity": 36.65654757848038,
+      "streamed_tokens": 48,
+      "active_window": 16,
+      "cache_bytes": 2048,
+      "scope": "checkpoint conformance and held-out corpus loss; no general quality or scale claim"
+    },
+    "sft": {
+      "status": "passed",
+      "checkpoint_sha256": "8861eff13d5dc434b2504c192858574855f7a241ea8c497fb9b46eb77c7ce786",
+      "evaluation_data_sha256": "a90ba7e2f054a3fc9d87edf577f4c97cc2f72f1560afee8accbbeeb1ebf49839",
+      "training_data_sha256": "cefe038d6096bbf93bc6de7dc20f823feed14a9dbbddab54bed78a14c77068eb",
+      "tokens_scored": 256,
+      "mean_nll": 3.6004678308963776,
+      "perplexity": 36.61536023417822,
+      "streamed_tokens": 48,
+      "active_window": 16,
+      "cache_bytes": 2048,
+      "scope": "checkpoint conformance and held-out corpus loss; no general quality or scale claim"
+    },
+    "dpo": {
+      "status": "passed",
+      "checkpoint_sha256": "6185351b2cb23ba8efcded793af60773280e75876fce97a9cec7f56e4f15ba40",
+      "evaluation_data_sha256": "a90ba7e2f054a3fc9d87edf577f4c97cc2f72f1560afee8accbbeeb1ebf49839",
+      "training_data_sha256": "cefe038d6096bbf93bc6de7dc20f823feed14a9dbbddab54bed78a14c77068eb",
+      "tokens_scored": 256,
+      "mean_nll": 3.5994205698370934,
+      "perplexity": 36.5770344652788,
+      "streamed_tokens": 48,
+      "active_window": 16,
+      "cache_bytes": 2048,
+      "scope": "checkpoint conformance and held-out corpus loss; no general quality or scale claim"
+    }
+  },
+  "served_prediction": [
+    {
+      "next_token_id": 16,
+      "input_tokens": 3
+    }
+  ],
+  "source_sha256": {
+    "training/__init__.py": "ca8a360794e82b5f6cbe0dd2a65405c784f437792d5714834a05262776b0e54d",
+    "training/alignment.py": "d063f71f355e63c953695fc812910c605760742c327b255d349dfecd592739d1",
+    "training/checkpoint.py": "4b4013d733f546afc10602222403b04846c27e54b9eca8a75acbaf60bd0b975e",
+    "training/data.py": "dce29f41e740af54a8070171ba068e538ddf1f9f9f3a69d8253c06ff4c29fc50",
+    "training/evaluation/evaluate.py": "a6f7eae0bd8b67abbc7cc835fcd14f4eae97b8ba32f5152f146dd514e7560496",
+    "training/mlflow_model.py": "97bdae34d3da3c8cccb73e433efc69182604000e9ce47b6fbff479098a52f062",
+    "training/registry.py": "b8a396d5591e5cdf18e26ef25eb483f9a59ed573f6a066f601332c0807b605b6",
+    "training/run.py": "5492ebbd4749052101c060d831d82ec74f3d03dabf27d20303994fd009151b84",
+    "training/src/__init__.py": "0244914a429db263b808f0ceff1050e5b1c27cc15c473ef2d2b2792acaa60667",
+    "training/src/attention_basics.py": "1da9f50eeba4896581a9bf0d9c805de35b7ec065acceb2fb32b83e65009db21b",
+    "training/src/modeling_mla.py": "77ca1e02403986c9d89f061076a4e8b60d5d63e41577c8554f8d48dcc3933c97"
+  },
+  "scope": "small synthetic CPU integration; production quality, 1B training, distributed GPU scale and vLLM are not established"
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "input_tokens": 1000083,
+  "stream_chunks": 5650,
+  "window_tokens": 512,
+  "max_active_tokens": 511,
+  "input_evictions": 5648,
+  "idempotency": "passed",
+  "checkpoint_replay": "passed",
+  "invalid_shift_rejection": "passed",
+  "backend_restart": "passed",
+  "stream_elapsed_s": 300.54087070901005,
+  "restart_continuation_equivalence": "passed",
+  "cancellation_retry": "passed",
+  "retained_snapshots": 2,
+  "history_database_bytes": 35987456,
+  "elapsed_s": 303.8820761130046,
+  "scope": "streaming/state conformance; general quality, perfect historical recall and full-system readiness are not established",
+  "sample_count": 299,
+  "max_sampled_server_rss_kib": 814028,
+  "max_sampled_client_rss_kib": 28324,
+  "max_sampled_server_gpu_mib": 954
+}

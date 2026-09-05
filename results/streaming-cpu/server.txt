@@ -1,0 +1,306 @@
+Starting cpu backend on 127.0.0.1:58105; window=512
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+warning: llama.cpp was compiled without support for GPU offload. Setting the split mode has no effect.
+warning: llama.cpp was compiled without support for GPU offload. Setting the main GPU has no effect.
+0.00.003.227 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.003.472 I srv          init: The UI is disabled
+0.00.003.474 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.004.706 I srv    load_model: loading model '.models/Qwen3.5-0.8B-Q8_0.gguf'
+0.01.001.965 W model has unused tensor blk.24.attn_norm.weight (size = 4096 bytes) -- ignoring
+0.01.001.972 W model has unused tensor blk.24.post_attention_norm.weight (size = 4096 bytes) -- ignoring
+0.01.001.980 W model has unused tensor blk.24.attn_q.weight (size = 4456448 bytes) -- ignoring
+0.01.001.983 W model has unused tensor blk.24.attn_k.weight (size = 557056 bytes) -- ignoring
+0.01.001.985 W model has unused tensor blk.24.attn_v.weight (size = 557056 bytes) -- ignoring
+0.01.001.995 W model has unused tensor blk.24.attn_output.weight (size = 2228224 bytes) -- ignoring
+0.01.001.998 W model has unused tensor blk.24.attn_q_norm.weight (size = 1024 bytes) -- ignoring
+0.01.002.001 W model has unused tensor blk.24.attn_k_norm.weight (size = 1024 bytes) -- ignoring
+0.01.002.004 W model has unused tensor blk.24.ffn_gate.weight (size = 3899392 bytes) -- ignoring
+0.01.002.009 W model has unused tensor blk.24.ffn_down.weight (size = 3899392 bytes) -- ignoring
+0.01.002.012 W model has unused tensor blk.24.ffn_up.weight (size = 3899392 bytes) -- ignoring
+0.01.002.016 W model has unused tensor blk.24.nextn.eh_proj.weight (size = 2228224 bytes) -- ignoring
+0.01.002.020 W model has unused tensor blk.24.nextn.enorm.weight (size = 4096 bytes) -- ignoring
+0.01.002.024 W model has unused tensor blk.24.nextn.hnorm.weight (size = 4096 bytes) -- ignoring
+0.01.002.034 W model has unused tensor blk.24.nextn.shared_head_norm.weight (size = 4096 bytes) -- ignoring
+0.01.059.285 I cmn          init: llama threadpool init, n_threads = 2
+0.01.193.005 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 512, kv_unified = 'false'
+0.01.193.074 W srv          init: --cache-idle-slots requires --cache-ram, disabling
+0.01.197.429 I srv  llama_server: model loaded
+0.01.197.434 I srv  llama_server: listening on http://127.0.0.1:58105
+0.01.274.960 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.01.274.999 I slot launch_slot_: id  0 | task 2 | processing task, is_child = 0
+0.02.724.444 I slot      release: id  0 | task 2 | stop processing: n_tokens = 177, truncated = 0
+0.02.805.138 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.02.805.175 I slot launch_slot_: id  0 | task 6 | processing task, is_child = 0
+0.04.266.705 I slot      release: id  0 | task 6 | stop processing: n_tokens = 354, truncated = 0
+0.04.270.383 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.04.270.408 I slot launch_slot_: id  0 | task 9 | processing task, is_child = 0
+0.04.273.537 I slot   operator(): id  0 | task 9 | explicit cache shift, n_keep = 4, n_discard = 20
+0.05.755.811 I slot      release: id  0 | task 9 | stop processing: n_tokens = 511, truncated = 1
+0.05.759.511 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.05.759.543 I slot launch_slot_: id  0 | task 12 | processing task, is_child = 0
+0.05.761.936 I slot   operator(): id  0 | task 12 | explicit cache shift, n_keep = 4, n_discard = 177
+0.07.232.500 I slot      release: id  0 | task 12 | stop processing: n_tokens = 511, truncated = 1
+0.07.236.721 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.07.236.744 I slot launch_slot_: id  0 | task 15 | processing task, is_child = 0
+0.07.239.280 I slot   operator(): id  0 | task 15 | explicit cache shift, n_keep = 4, n_discard = 177
+0.08.717.312 I slot      release: id  0 | task 15 | stop processing: n_tokens = 511, truncated = 1
+0.08.722.423 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.08.722.451 I slot launch_slot_: id  0 | task 18 | processing task, is_child = 0
+0.08.724.902 I slot   operator(): id  0 | task 18 | explicit cache shift, n_keep = 4, n_discard = 177
+0.10.210.090 I slot      release: id  0 | task 18 | stop processing: n_tokens = 511, truncated = 1
+0.10.213.965 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.10.213.992 I slot launch_slot_: id  0 | task 21 | processing task, is_child = 0
+0.10.216.387 I slot   operator(): id  0 | task 21 | explicit cache shift, n_keep = 4, n_discard = 177
+0.11.718.875 I slot      release: id  0 | task 21 | stop processing: n_tokens = 511, truncated = 1
+0.11.722.740 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.11.722.764 I slot launch_slot_: id  0 | task 24 | processing task, is_child = 0
+0.11.725.192 I slot   operator(): id  0 | task 24 | explicit cache shift, n_keep = 4, n_discard = 177
+0.13.197.881 I slot      release: id  0 | task 24 | stop processing: n_tokens = 511, truncated = 1
+0.13.201.637 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.13.201.662 I slot launch_slot_: id  0 | task 27 | processing task, is_child = 0
+0.13.204.012 I slot   operator(): id  0 | task 27 | explicit cache shift, n_keep = 4, n_discard = 177
+0.14.680.184 I slot      release: id  0 | task 27 | stop processing: n_tokens = 511, truncated = 1
+0.14.684.127 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.14.684.153 I slot launch_slot_: id  0 | task 30 | processing task, is_child = 0
+0.14.686.683 I slot   operator(): id  0 | task 30 | explicit cache shift, n_keep = 4, n_discard = 177
+0.16.184.176 I slot      release: id  0 | task 30 | stop processing: n_tokens = 511, truncated = 1
+0.16.187.780 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.16.187.804 I slot launch_slot_: id  0 | task 33 | processing task, is_child = 0
+0.16.190.167 I slot   operator(): id  0 | task 33 | explicit cache shift, n_keep = 4, n_discard = 177
+0.17.660.885 I slot      release: id  0 | task 33 | stop processing: n_tokens = 511, truncated = 1
+0.17.664.569 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.17.664.595 I slot launch_slot_: id  0 | task 36 | processing task, is_child = 0
+0.17.667.103 I slot   operator(): id  0 | task 36 | explicit cache shift, n_keep = 4, n_discard = 177
+0.19.138.462 I slot      release: id  0 | task 36 | stop processing: n_tokens = 511, truncated = 1
+0.19.142.155 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.19.142.182 I slot launch_slot_: id  0 | task 39 | processing task, is_child = 0
+0.19.144.396 I slot   operator(): id  0 | task 39 | explicit cache shift, n_keep = 4, n_discard = 177
+0.20.617.010 I slot      release: id  0 | task 39 | stop processing: n_tokens = 511, truncated = 1
+0.20.621.188 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.20.621.213 I slot launch_slot_: id  0 | task 42 | processing task, is_child = 0
+0.20.623.576 I slot   operator(): id  0 | task 42 | explicit cache shift, n_keep = 4, n_discard = 177
+0.22.116.875 I slot      release: id  0 | task 42 | stop processing: n_tokens = 511, truncated = 1
+0.22.120.629 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.22.120.656 I slot launch_slot_: id  0 | task 45 | processing task, is_child = 0
+0.22.123.348 I slot   operator(): id  0 | task 45 | explicit cache shift, n_keep = 4, n_discard = 177
+0.23.594.585 I slot      release: id  0 | task 45 | stop processing: n_tokens = 511, truncated = 1
+0.23.599.051 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.23.599.078 I slot launch_slot_: id  0 | task 48 | processing task, is_child = 0
+0.23.601.880 I slot   operator(): id  0 | task 48 | explicit cache shift, n_keep = 4, n_discard = 177
+0.25.076.672 I slot      release: id  0 | task 48 | stop processing: n_tokens = 511, truncated = 1
+0.25.165.286 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.25.165.318 I slot launch_slot_: id  0 | task 52 | processing task, is_child = 0
+0.25.167.597 I slot   operator(): id  0 | task 52 | explicit cache shift, n_keep = 4, n_discard = 177
+0.26.644.381 I slot      release: id  0 | task 52 | stop processing: n_tokens = 511, truncated = 1
+0.26.648.241 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.26.648.268 I slot launch_slot_: id  0 | task 55 | processing task, is_child = 0
+0.26.650.639 I slot   operator(): id  0 | task 55 | explicit cache shift, n_keep = 4, n_discard = 177
+0.28.124.360 I slot      release: id  0 | task 55 | stop processing: n_tokens = 511, truncated = 1
+0.28.128.001 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.28.128.025 I slot launch_slot_: id  0 | task 58 | processing task, is_child = 0
+0.28.130.395 I slot   operator(): id  0 | task 58 | explicit cache shift, n_keep = 4, n_discard = 177
+0.29.611.365 I slot      release: id  0 | task 58 | stop processing: n_tokens = 511, truncated = 1
+0.29.615.621 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.29.615.649 I slot launch_slot_: id  0 | task 61 | processing task, is_child = 0
+0.29.618.052 I slot   operator(): id  0 | task 61 | explicit cache shift, n_keep = 4, n_discard = 177
+0.31.087.487 I slot      release: id  0 | task 61 | stop processing: n_tokens = 511, truncated = 1
+0.31.091.551 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.31.091.581 I slot launch_slot_: id  0 | task 64 | processing task, is_child = 0
+0.31.094.341 I slot   operator(): id  0 | task 64 | explicit cache shift, n_keep = 4, n_discard = 177
+0.32.572.955 I slot      release: id  0 | task 64 | stop processing: n_tokens = 511, truncated = 1
+0.32.576.691 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.32.576.716 I slot launch_slot_: id  0 | task 67 | processing task, is_child = 0
+0.32.579.062 I slot   operator(): id  0 | task 67 | explicit cache shift, n_keep = 4, n_discard = 177
+0.34.065.159 I slot      release: id  0 | task 67 | stop processing: n_tokens = 511, truncated = 1
+0.34.069.076 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.34.069.104 I slot launch_slot_: id  0 | task 70 | processing task, is_child = 0
+0.34.072.024 I slot   operator(): id  0 | task 70 | explicit cache shift, n_keep = 4, n_discard = 177
+0.35.555.732 I slot      release: id  0 | task 70 | stop processing: n_tokens = 511, truncated = 1
+0.35.559.613 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.35.559.640 I slot launch_slot_: id  0 | task 73 | processing task, is_child = 0
+0.35.562.200 I slot   operator(): id  0 | task 73 | explicit cache shift, n_keep = 4, n_discard = 177
+0.37.045.235 I slot      release: id  0 | task 73 | stop processing: n_tokens = 511, truncated = 1
+0.37.047.439 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.37.047.465 I slot launch_slot_: id  0 | task 76 | processing task, is_child = 0
+0.37.047.473 E srv    send_error: task id = 76, error: n_cache_shift does not match the retained stream state
+0.37.047.475 I slot      release: id  0 | task 76 | stop processing: n_tokens = 511, truncated = 0
+0.37.047.481 W srv          stop: cancel task, id_task = 76
+0.37.109.414 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.37.109.442 I slot launch_slot_: id  0 | task 81 | processing task, is_child = 0
+0.37.109.688 I slot   operator(): id  0 | task 81 | explicit cache shift, n_keep = 4, n_discard = 177
+0.38.587.177 I slot      release: id  0 | task 81 | stop processing: n_tokens = 511, truncated = 1
+0.38.588.166 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.38.588.192 I slot launch_slot_: id  0 | task 84 | processing task, is_child = 0
+0.38.590.698 I slot   operator(): id  0 | task 84 | explicit cache shift, n_keep = 4, n_discard = 177
+0.40.082.108 I slot      release: id  0 | task 84 | stop processing: n_tokens = 511, truncated = 1
+0.40.083.089 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.40.083.115 I slot launch_slot_: id  0 | task 87 | processing task, is_child = 0
+0.40.085.419 I slot   operator(): id  0 | task 87 | explicit cache shift, n_keep = 4, n_discard = 177
+0.41.557.540 I slot      release: id  0 | task 87 | stop processing: n_tokens = 511, truncated = 1
+0.41.558.456 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.41.558.479 I slot launch_slot_: id  0 | task 90 | processing task, is_child = 0
+0.41.560.822 I slot   operator(): id  0 | task 90 | explicit cache shift, n_keep = 4, n_discard = 177
+0.43.037.348 I slot      release: id  0 | task 90 | stop processing: n_tokens = 511, truncated = 1
+0.43.038.234 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.43.038.259 I slot launch_slot_: id  0 | task 93 | processing task, is_child = 0
+0.43.040.619 I slot   operator(): id  0 | task 93 | explicit cache shift, n_keep = 4, n_discard = 177
+0.44.510.776 I slot      release: id  0 | task 93 | stop processing: n_tokens = 511, truncated = 1
+0.44.511.681 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.44.511.706 I slot launch_slot_: id  0 | task 96 | processing task, is_child = 0
+0.44.514.253 I slot   operator(): id  0 | task 96 | explicit cache shift, n_keep = 4, n_discard = 177
+0.45.995.446 I slot      release: id  0 | task 96 | stop processing: n_tokens = 511, truncated = 1
+0.45.996.362 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.45.996.389 I slot launch_slot_: id  0 | task 99 | processing task, is_child = 0
+0.45.998.625 I slot   operator(): id  0 | task 99 | explicit cache shift, n_keep = 4, n_discard = 177
+0.47.464.968 I slot      release: id  0 | task 99 | stop processing: n_tokens = 511, truncated = 1
+0.47.465.859 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.47.465.889 I slot launch_slot_: id  0 | task 102 | processing task, is_child = 0
+0.47.468.652 I slot   operator(): id  0 | task 102 | explicit cache shift, n_keep = 4, n_discard = 177
+0.48.936.279 I slot      release: id  0 | task 102 | stop processing: n_tokens = 511, truncated = 1
+0.48.937.218 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.48.937.240 I slot launch_slot_: id  0 | task 105 | processing task, is_child = 0
+0.48.939.550 I slot   operator(): id  0 | task 105 | explicit cache shift, n_keep = 4, n_discard = 35
+0.49.920.579 I slot print_timing: id  0 | task 105 | prompt eval time =     260.31 ms /    19 tokens (   13.70 ms per token,    72.99 tokens per second)
+0.49.920.582 I slot print_timing: id  0 | task 105 |        eval time =     723.00 ms /    16 tokens (   48.20 ms per token,    20.75 tokens per second)
+0.49.920.583 I slot print_timing: id  0 | task 105 |       total time =     983.31 ms /    35 tokens
+0.49.920.597 I slot print_timing: id  0 | task 105 |    graphs reused =         15
+0.49.920.623 I slot      release: id  0 | task 105 | stop processing: n_tokens = 510, truncated = 1
+0.49.923.167 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.49.923.189 I slot launch_slot_: id  0 | task 123 | processing task, is_child = 0
+0.49.925.781 I slot   operator(): id  0 | task 123 | explicit cache shift, n_keep = 4, n_discard = 23
+0.50.799.333 I slot print_timing: id  0 | task 123 | prompt eval time =     158.34 ms /     8 tokens (   19.79 ms per token,    50.52 tokens per second)
+0.50.799.337 I slot print_timing: id  0 | task 123 |        eval time =     717.78 ms /    16 tokens (   47.85 ms per token,    20.90 tokens per second)
+0.50.799.338 I slot print_timing: id  0 | task 123 |       total time =     876.13 ms /    24 tokens
+0.50.799.338 I slot print_timing: id  0 | task 123 |    graphs reused =         29
+0.50.799.364 I slot      release: id  0 | task 123 | stop processing: n_tokens = 510, truncated = 1
+Starting cpu backend on 127.0.0.1:58105; window=512
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+warning: llama.cpp was compiled without support for GPU offload. Setting the split mode has no effect.
+warning: llama.cpp was compiled without support for GPU offload. Setting the main GPU has no effect.
+0.00.003.217 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.003.426 I srv          init: The UI is disabled
+0.00.003.427 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.004.677 I srv    load_model: loading model '.models/Qwen3.5-0.8B-Q8_0.gguf'
+0.00.997.098 W model has unused tensor blk.24.attn_norm.weight (size = 4096 bytes) -- ignoring
+0.00.997.105 W model has unused tensor blk.24.post_attention_norm.weight (size = 4096 bytes) -- ignoring
+0.00.997.112 W model has unused tensor blk.24.attn_q.weight (size = 4456448 bytes) -- ignoring
+0.00.997.115 W model has unused tensor blk.24.attn_k.weight (size = 557056 bytes) -- ignoring
+0.00.997.118 W model has unused tensor blk.24.attn_v.weight (size = 557056 bytes) -- ignoring
+0.00.997.127 W model has unused tensor blk.24.attn_output.weight (size = 2228224 bytes) -- ignoring
+0.00.997.130 W model has unused tensor blk.24.attn_q_norm.weight (size = 1024 bytes) -- ignoring
+0.00.997.133 W model has unused tensor blk.24.attn_k_norm.weight (size = 1024 bytes) -- ignoring
+0.00.997.136 W model has unused tensor blk.24.ffn_gate.weight (size = 3899392 bytes) -- ignoring
+0.00.997.138 W model has unused tensor blk.24.ffn_down.weight (size = 3899392 bytes) -- ignoring
+0.00.997.142 W model has unused tensor blk.24.ffn_up.weight (size = 3899392 bytes) -- ignoring
+0.00.997.147 W model has unused tensor blk.24.nextn.eh_proj.weight (size = 2228224 bytes) -- ignoring
+0.00.997.150 W model has unused tensor blk.24.nextn.enorm.weight (size = 4096 bytes) -- ignoring
+0.00.997.155 W model has unused tensor blk.24.nextn.hnorm.weight (size = 4096 bytes) -- ignoring
+0.00.997.163 W model has unused tensor blk.24.nextn.shared_head_norm.weight (size = 4096 bytes) -- ignoring
+0.01.054.855 I cmn          init: llama threadpool init, n_threads = 2
+0.01.182.331 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 512, kv_unified = 'false'
+0.01.182.399 W srv          init: --cache-idle-slots requires --cache-ram, disabling
+0.01.186.735 I srv  llama_server: model loaded
+0.01.186.741 I srv  llama_server: listening on http://127.0.0.1:58105
+0.01.255.330 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.01.255.358 I slot launch_slot_: id  0 | task 2 | processing task, is_child = 0
+0.01.255.627 I slot   operator(): id  0 | task 2 | explicit cache shift, n_keep = 4, n_discard = 177
+0.02.740.358 I slot      release: id  0 | task 2 | stop processing: n_tokens = 511, truncated = 1
+0.02.741.332 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.02.741.362 I slot launch_slot_: id  0 | task 5 | processing task, is_child = 0
+0.02.743.683 I slot   operator(): id  0 | task 5 | explicit cache shift, n_keep = 4, n_discard = 177
+0.04.217.294 I slot      release: id  0 | task 5 | stop processing: n_tokens = 511, truncated = 1
+0.04.218.185 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.04.218.210 I slot launch_slot_: id  0 | task 8 | processing task, is_child = 0
+0.04.220.406 I slot   operator(): id  0 | task 8 | explicit cache shift, n_keep = 4, n_discard = 177
+0.05.692.799 I slot      release: id  0 | task 8 | stop processing: n_tokens = 511, truncated = 1
+0.05.693.780 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.05.693.808 I slot launch_slot_: id  0 | task 11 | processing task, is_child = 0
+0.05.696.047 I slot   operator(): id  0 | task 11 | explicit cache shift, n_keep = 4, n_discard = 177
+0.07.168.972 I slot      release: id  0 | task 11 | stop processing: n_tokens = 511, truncated = 1
+0.07.169.877 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.07.169.901 I slot launch_slot_: id  0 | task 14 | processing task, is_child = 0
+0.07.172.592 I slot   operator(): id  0 | task 14 | explicit cache shift, n_keep = 4, n_discard = 177
+0.08.643.202 I slot      release: id  0 | task 14 | stop processing: n_tokens = 511, truncated = 1
+0.08.644.196 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.08.644.222 I slot launch_slot_: id  0 | task 17 | processing task, is_child = 0
+0.08.646.396 I slot   operator(): id  0 | task 17 | explicit cache shift, n_keep = 4, n_discard = 177
+0.10.121.407 I slot      release: id  0 | task 17 | stop processing: n_tokens = 511, truncated = 1
+0.10.122.368 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.10.122.417 I slot launch_slot_: id  0 | task 20 | processing task, is_child = 0
+0.10.125.395 I slot   operator(): id  0 | task 20 | explicit cache shift, n_keep = 4, n_discard = 177
+0.11.641.769 I slot      release: id  0 | task 20 | stop processing: n_tokens = 511, truncated = 1
+0.11.642.684 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.11.642.712 I slot launch_slot_: id  0 | task 23 | processing task, is_child = 0
+0.11.645.305 I slot   operator(): id  0 | task 23 | explicit cache shift, n_keep = 4, n_discard = 177
+0.13.136.494 I slot      release: id  0 | task 23 | stop processing: n_tokens = 511, truncated = 1
+0.13.137.406 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.13.137.434 I slot launch_slot_: id  0 | task 26 | processing task, is_child = 0
+0.13.140.448 I slot   operator(): id  0 | task 26 | explicit cache shift, n_keep = 4, n_discard = 35
+0.13.532.707 I slot      release: id  0 | task 26 | stop processing: n_tokens = 510, truncated = 1
+0.13.537.033 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.13.537.060 I slot launch_slot_: id  0 | task 29 | processing task, is_child = 0
+0.13.540.129 I slot   operator(): id  0 | task 29 | explicit cache shift, n_keep = 4, n_discard = 23
+0.14.423.595 I slot print_timing: id  0 | task 29 | prompt eval time =     162.24 ms /     8 tokens (   20.28 ms per token,    49.31 tokens per second)
+0.14.423.599 I slot print_timing: id  0 | task 29 |        eval time =     724.26 ms /    16 tokens (   48.28 ms per token,    20.71 tokens per second)
+0.14.423.600 I slot print_timing: id  0 | task 29 |       total time =     886.50 ms /    24 tokens
+0.14.423.605 I slot print_timing: id  0 | task 29 |    graphs reused =         15
+0.14.423.629 I slot      release: id  0 | task 29 | stop processing: n_tokens = 510, truncated = 1
+0.14.427.295 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.14.427.319 I slot launch_slot_: id  0 | task 47 | processing task, is_child = 0
+0.14.430.423 I slot   operator(): id  0 | task 47 | explicit cache shift, n_keep = 4, n_discard = 135
+0.14.637.628 W srv          stop: cancel task, id_task = 47
+0.14.685.724 I slot      release: id  0 | task 47 | stop processing: n_tokens = 385, truncated = 1
+0.14.748.768 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.14.751.718 I slot launch_slot_: id  0 | task 57 | processing task, is_child = 0
+0.14.751.958 I slot   operator(): id  0 | task 57 | explicit cache shift, n_keep = 4, n_discard = 177
+0.16.239.182 I slot      release: id  0 | task 57 | stop processing: n_tokens = 511, truncated = 1
+0.16.240.068 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.16.240.091 I slot launch_slot_: id  0 | task 60 | processing task, is_child = 0
+0.16.242.432 I slot   operator(): id  0 | task 60 | explicit cache shift, n_keep = 4, n_discard = 177
+0.17.763.801 I slot      release: id  0 | task 60 | stop processing: n_tokens = 511, truncated = 1
+0.17.764.771 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.17.764.800 I slot launch_slot_: id  0 | task 63 | processing task, is_child = 0
+0.17.767.803 I slot   operator(): id  0 | task 63 | explicit cache shift, n_keep = 4, n_discard = 177
+0.19.286.544 I slot      release: id  0 | task 63 | stop processing: n_tokens = 511, truncated = 1
+0.19.287.424 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.19.287.449 I slot launch_slot_: id  0 | task 66 | processing task, is_child = 0
+0.19.289.728 I slot   operator(): id  0 | task 66 | explicit cache shift, n_keep = 4, n_discard = 177
+0.20.788.868 I slot      release: id  0 | task 66 | stop processing: n_tokens = 511, truncated = 1
+0.20.789.803 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.20.789.826 I slot launch_slot_: id  0 | task 69 | processing task, is_child = 0
+0.20.792.028 I slot   operator(): id  0 | task 69 | explicit cache shift, n_keep = 4, n_discard = 177
+0.22.280.146 I slot      release: id  0 | task 69 | stop processing: n_tokens = 511, truncated = 1
+0.22.281.072 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.22.281.095 I slot launch_slot_: id  0 | task 72 | processing task, is_child = 0
+0.22.284.068 I slot   operator(): id  0 | task 72 | explicit cache shift, n_keep = 4, n_discard = 177
+0.23.809.599 I slot      release: id  0 | task 72 | stop processing: n_tokens = 511, truncated = 1
+0.23.810.541 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.23.810.576 I slot launch_slot_: id  0 | task 75 | processing task, is_child = 0
+0.23.812.855 I slot   operator(): id  0 | task 75 | explicit cache shift, n_keep = 4, n_discard = 177
+0.25.306.156 I slot      release: id  0 | task 75 | stop processing: n_tokens = 511, truncated = 1
+0.25.307.106 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.25.307.131 I slot launch_slot_: id  0 | task 78 | processing task, is_child = 0
+0.25.309.681 I slot   operator(): id  0 | task 78 | explicit cache shift, n_keep = 4, n_discard = 177
+0.26.800.692 I slot      release: id  0 | task 78 | stop processing: n_tokens = 511, truncated = 1
+0.26.801.562 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.26.801.595 I slot launch_slot_: id  0 | task 81 | processing task, is_child = 0
+0.26.804.182 I slot   operator(): id  0 | task 81 | explicit cache shift, n_keep = 4, n_discard = 35
+0.27.197.391 I slot      release: id  0 | task 81 | stop processing: n_tokens = 510, truncated = 1
+0.27.198.395 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.27.198.422 I slot launch_slot_: id  0 | task 84 | processing task, is_child = 0
+0.27.200.769 I slot   operator(): id  0 | task 84 | explicit cache shift, n_keep = 4, n_discard = 23
+0.27.495.170 I slot      release: id  0 | task 84 | stop processing: n_tokens = 510, truncated = 1
+0.27.495.998 I slot get_availabl: id  0 | task -1 | selected slot by id (0)
+0.27.496.023 I slot launch_slot_: id  0 | task 87 | processing task, is_child = 0
+0.27.498.283 I slot   operator(): id  0 | task 87 | explicit cache shift, n_keep = 4, n_discard = 135
+0.32.460.247 I slot print_timing: id  0 | task 87 | n_gen =    100, tg =  20.62 t/s, tg_3s =  20.82 t/s
+0.33.839.902 I slot print_timing: id  0 | task 87 | prompt eval time =     162.19 ms /     8 tokens (   20.27 ms per token,    49.33 tokens per second)
+0.33.839.906 I slot print_timing: id  0 | task 87 |        eval time =    6181.67 ms /   128 tokens (   48.67 ms per token,    20.54 tokens per second)
+0.33.839.906 I slot print_timing: id  0 | task 87 |       total time =    6343.85 ms /   136 tokens
+0.33.839.907 I slot print_timing: id  0 | task 87 |    graphs reused =        142
+0.33.839.929 I slot      release: id  0 | task 87 | stop processing: n_tokens = 510, truncated = 1
+0.33.843.105 I srv    operator(): operator(): cleaning up before exit...

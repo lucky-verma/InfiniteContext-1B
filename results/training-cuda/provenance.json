@@ -1,0 +1,8 @@
+{
+  "redactions": "The temporary workspace path is replaced with <workspace>. The optional NumPy initialization warning is preserved; these checks do not use NumPy.",
+  "original_sha256": {
+    "resumed.txt": "f55a91ec684f780038f4dc8d86d6894470c07b15f456136f728a31169e46e9cb",
+    "cuda.txt": "1f50baa852928838e2d43feb04f1146054e205fb4b94b4508755604bbfeffc43",
+    "cpu.txt": "9eee4628220488b0429a97442a4a57be9f3d717fc00ebef4d3623dd334ce9af6"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "failures": [
+    {
+      "stage": "2026-09-05-qwen35-context-shift",
+      "result": {
+        "status": "failed",
+        "error": "AssertionError: incomplete generation: 498"
+      },
+      "cause": "Stock runtime disables context shifting for multiple position components; generation stops at the fixed context limit.",
+      "raw_sha256": {
+        "events.jsonl": "8bbb967f5a189f1318b3115db9aa394da21776a6ce6000a60f9ffddd2e1c2401",
+        "server.log": "9f733d99e1b1f62b611e528e7618597125925f8afa917d0a5277af2d38f0258d",
+        "summary.json": "20fee83d54dcd80c8b6fdf4b41c02e9b53b706b9c2a7b9fb1dc32821a6eae014",
+        "request.json": "8fa81ce13ecf7eb089f948ad3f164042d97076ebd5e4c0e3417175f7cea679d1",
+        "metrics.txt": "cce918650ca66a3605548adc3f4929a12b3871f6f0452c83e5024b455ca2ce39",
+        "metadata.json": "d52890c5312a8755bfb42581902a38304b7804de780b9f2b1fcb9b6c3038fcf5"
+      }
+    },
+    {
+      "stage": "qwen35-context-shift-patched-cpu",
+      "result": {
+        "status": "failed",
+        "error": "RuntimeError: stream ended without a final completion event"
+      },
+      "cause": "Enabling the capability guard alone leaves a sequence-position assertion; spatial metadata translation is also required.",
+      "raw_sha256": {
+        "events.jsonl": "07c5046eec6f6c072fc1a5814e8eb0608ab529f8de1f587142ee662b8e1902c9",
+        "server.log": "690c45503e2c92cb3c265f8b450303f1c824ebf0f4dabbb28b422f1d089599ce",
+        "summary.json": "dd9105cf54d75863309b82b9d08611676bafccb040766bf9489ddfd6ca186ccf",
+        "request.json": "8fa81ce13ecf7eb089f948ad3f164042d97076ebd5e4c0e3417175f7cea679d1",
+        "metadata.json": "52e7665a164ca058dd025f26785fedcd1cac5a8ce0f88badb648ffaa64ba20b7"
+      }
+    },
+    {
+      "stage": "streaming-cpu",
+      "result": {
+        "status": "failed",
+        "error": "RuntimeError: backend HTTP 400: {\"error\":{\"code\":400,\"message\":\"n_cache_shift does not match the retained stream state\",\"type\":\"invalid_request_error\"}}",
+        "sample_count": 39,
+        "max_sampled_server_rss_kib": 1084444,
+        "max_sampled_client_rss_kib": 26076
+      },
+      "cause": "Shared prompt RAM cache restoration replaces the session state; explicit shifts must disable that cache.",
+      "raw_sha256": {
+        "events.jsonl": "8a65f5050a8326367d55952bef08db1efb61c1831113956d14b11a54b43a995d",
+        "resources.jsonl": "6985185d88555c8ef9000178a8e024ffed572016ac09e155da1e6751c291b604",
+        "summary.json": "49a6f2b16f2d742d903984fb589a5b9b7ff22b3e010551c3611707b3f1fa1adf",
+        "server.txt": "f2723463392ecdb43428b797fe1aa1ec15b7a363de0998163a5025bae335982b",
+        "metadata.json": "e6085585b60ae1ecc447f1d92af654e340f46b611b90d4425f50a61527f964b3"
+      }
+    },
+    {
+      "stage": "streaming-cpu-v2",
+      "result": {
+        "status": "failed",
+        "error": "RuntimeError: backend HTTP 400: {\"error\":{\"code\":400,\"message\":\"n_cache_shift does not match the retained stream state\",\"type\":\"invalid_request_error\"}}",
+        "sample_count": 51,
+        "max_sampled_server_rss_kib": 1131116,
+        "max_sampled_client_rss_kib": 26068
+      },
+      "cause": "Repeated reproduction of the shared prompt cache state mismatch before cache-ram was disabled.",
+      "raw_sha256": {
+        "events.jsonl": "b6c2fe553cd4d21c87da60ca0fff3eda71f0f268b8bf762b61105e20b12f4695",
+        "resources.jsonl": "37e363102d24fa96d849d157190645a971c1c0f2b0d864c1137c847bfa63d1d7",
+        "summary.json": "9f6c7c33fb9641d953f25d7833d98fc716a951aa05d580312b8146924116a7a2",
+        "server.txt": "93d4b110cf5f595e5dcc48407d2f47460a37106118fd778c85d8857ea70c8f3b",
+        "metadata.json": "9e8e3a5847b0163e4204e4f872dc4ef47f6080840dd5bf1a4d57ba8ca7a1dfbd"
+      }
+    }
+  ],
+  "raw_location": "Original development diagnostics are preserved in the local ignored run archive; this file reports their outcomes and hashes."
+}

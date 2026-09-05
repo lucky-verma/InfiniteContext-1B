@@ -1,0 +1,31 @@
+name: infinitecontext
+
+services:
+  model:
+    image: ${IC_IMAGE:-infinitecontext:local}
+    build:
+      context: ..
+      dockerfile: serving/Dockerfile
+    ports:
+      - '127.0.0.1:${IC_PORT:-18081}:18081'
+    volumes:
+      - ../.models:/app/.models:ro
+      - sessions:/app/.sessions
+    command: [--host, 0.0.0.0, --window, '512']
+    cpus: 2.0
+    mem_limit: 3g
+    pids_limit: 128
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs:
+      - /tmp:size=64m
+    healthcheck:
+      test: [CMD, python3, -c, "from urllib.request import urlopen; urlopen('http://127.0.0.1:18081/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 30s
+
+volumes:
+  sessions:

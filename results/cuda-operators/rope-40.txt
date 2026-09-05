@@ -1,0 +1,88 @@
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 7762 MiB):
+  Device 0: NVIDIA GeForce RTX 2070 SUPER, compute capability 7.5, VMM: yes, VRAM: 7762 MiB
+Testing 2 devices
+
+Backend 1/2: CUDA0
+  Device description: NVIDIA GeForce RTX 2070 SUPER
+  Device memory: 7762 MB (6926 MB free)
+
+  ROPE(type=f32,ne_a=[128,12,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=0,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,28,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=0,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,12,2,1],n_dims=20,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=0,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,28,2,1],n_dims=32,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=0,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,16,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=0,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[16,16,8192,1],n_dims=16,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=0,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,12,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=1,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,28,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=1,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,12,2,1],n_dims=20,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=1,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,28,2,1],n_dims=32,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=1,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,16,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=1,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[16,16,8192,1],n_dims=16,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=1,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,12,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=0,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,28,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=0,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,12,2,1],n_dims=20,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=0,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,28,2,1],n_dims=32,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=0,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,16,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=0,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[16,16,8192,1],n_dims=16,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=0,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,12,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=1,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,28,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=1,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,12,2,1],n_dims=20,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=1,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,28,2,1],n_dims=32,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=1,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,16,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=1,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[16,16,8192,1],n_dims=16,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=1,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.000000,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.424500,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.424500,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.424500,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.000000,af=1.424500,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.746500,af=1.000000,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.746500,af=1.000000,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.746500,af=1.000000,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.746500,af=1.000000,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.746500,af=1.424500,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.746500,af=1.424500,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.746500,af=1.424500,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.000000,ef=0.746500,af=1.424500,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.000000,af=1.000000,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.000000,af=1.000000,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.000000,af=1.000000,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.000000,af=1.000000,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.000000,af=1.424500,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.000000,af=1.424500,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.000000,af=1.424500,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.000000,af=1.424500,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.000000,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.000000,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.000000,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.000000,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=0,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[36,16,2457,1],n_dims=36,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=1,v=2,inplace=0,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,32,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=0,v=0,inplace=1,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,32,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=0,v=1,inplace=1,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,32,2,3],n_dims=128,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=0,v=1,inplace=1,n_offs=0): not supported [CUDA0] 
+  ROPE(type=f32,ne_a=[128,32,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=1,v=0,inplace=1,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,32,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=1,v=1,inplace=1,n_offs=0): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,32,2,3],n_dims=128,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=1,v=1,inplace=1,n_offs=0): not supported [CUDA0] 
+  ROPE(type=f16,ne_a=[128,32,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=0,v=0,inplace=1,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[128,32,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=0,v=1,inplace=1,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[128,32,2,3],n_dims=128,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=0,v=1,inplace=1,n_offs=0): ggml_backend_cuda_graph_compute: CUDA graph warmup complete
+not supported [CUDA0] 
+  ROPE(type=f16,ne_a=[128,32,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=1,v=0,inplace=1,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[128,32,2,1],n_dims=128,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=1,v=1,inplace=1,n_offs=0): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[128,32,2,3],n_dims=128,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=1,v=1,inplace=1,n_offs=0): ggml_backend_cuda_graph_compute: CUDA graph warmup reset
+not supported [CUDA0] 
+  ROPE(type=f32,ne_a=[128,12,2,1],n_dims=24,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=0,v=0,inplace=0,n_offs=32): [1;32mOK[0m
+  ROPE(type=f32,ne_a=[128,12,2,1],n_dims=24,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=1,v=0,inplace=0,n_offs=32): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[128,12,2,1],n_dims=24,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=0,v=0,inplace=0,n_offs=32): [1;32mOK[0m
+  ROPE(type=f16,ne_a=[128,12,2,1],n_dims=24,mode=40,n_ctx=512,fs=1.424500,ef=0.746500,af=1.424500,ff=1,v=0,inplace=0,n_offs=32): [1;32mOK[0m
+  68/68 tests passed
+  Backend CUDA0: [1;32mOK[0m
+Backend 2/2: CPU
+  Skipping
+2/2 backends passed
+[1;32mOK[0m

@@ -1,0 +1,69 @@
+{
+  "backend": "cpu",
+  "hardware": "CPU execution",
+  "window": 512,
+  "requested_input_tokens": 4096,
+  "model": {
+    "purpose": "pretrained reference for text-only streaming and retention experiments; distinct from the custom MLA model",
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "base_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "repository": "ggml-org/Qwen3.5-0.8B-GGUF",
+    "revision": "8fea620810c4afa23dd6443f999a48574c1611a3",
+    "filename": "Qwen3.5-0.8B-Q8_0.gguf",
+    "sha256": "37ae482d336108d23516fa35e8e0c4126688d81018b87178a18d752a1357814f",
+    "size_bytes": 833592096,
+    "license": "apache-2.0",
+    "source": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+    "artifact_source": "https://huggingface.co/ggml-org/Qwen3.5-0.8B-GGUF"
+  },
+  "runtime": {
+    "repository": "https://github.com/ggml-org/llama.cpp.git",
+    "revision": "6703d7894c70e8b076ce4608157d056e42e6889c",
+    "patch": "patches/llama.cpp/streaming-context.patch",
+    "patch_sha256": "c3e59dec5beb6debf3b92f49a4fdc11d4fe8b168bcc963af195b25c54ee40d9f",
+    "build_flags": [
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DGGML_NATIVE=ON",
+      "-DLLAMA_BUILD_TESTS=ON",
+      "-DLLAMA_BUILD_TOOLS=ON",
+      "-DLLAMA_BUILD_UI=OFF",
+      "-DLLAMA_USE_PREBUILT_UI=OFF"
+    ],
+    "protocol": "position-aware-stream-v1"
+  },
+  "build_receipt": {
+    "backend": "cpu",
+    "source_revision": "6703d7894c70e8b076ce4608157d056e42e6889c",
+    "patch_sha256": "c3e59dec5beb6debf3b92f49a4fdc11d4fe8b168bcc963af195b25c54ee40d9f",
+    "build_flags": [
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DGGML_NATIVE=ON",
+      "-DLLAMA_BUILD_TESTS=ON",
+      "-DLLAMA_BUILD_TOOLS=ON",
+      "-DLLAMA_BUILD_UI=OFF",
+      "-DLLAMA_USE_PREBUILT_UI=OFF",
+      "-DGGML_CUDA=OFF"
+    ],
+    "binary_sha256": "ddee5a5e947406648b64f9c3d980e8f8c581f0468a3ed38ed5981eac5834d955",
+    "runtime_version": "version: 0.3.0-dev (build 1, commit 6703d78)\nbuilt with GNU 13.3.0 for Linux x86_64",
+    "artifact_sha256": {
+      "libggml-base.so.0.22.0": "1a9bf0299b80f23f06eb522db991e01ed1aac63412937994eace76cfad55ea72",
+      "libggml-cpu.so.0.22.0": "aa1e6b80dfde645b309d56c812f875e8662dfda7bb865828fd57279d07fdfb4b",
+      "libggml.so.0.22.0": "75652d6e57bae24120933e060b8d3975abccd772dc53022451ab1b411caefb54",
+      "libllama-common.so.0.3.0": "a455cfb12dfa3078c60bdf4ffbe4e424f430373fd252cbbea5ee973b9c36e5cf",
+      "libllama-server-impl.so": "039e34384c1933ef77693ff339c11f0e69cf37492f239a8cf1c842323a6f256a",
+      "libllama.so.0.3.0": "6e9450dadfd6a9cbbf1ed794b4c571c47a36a8e639ea8cbcf9ddd59daabee02a",
+      "libmtmd.so.0.3.0": "ad980e825110923b4cb9090a6f8ab0e25d87bf14b23a0dbd3f0c1dd99e2bb810",
+      "llama-server": "ddee5a5e947406648b64f9c3d980e8f8c581f0468a3ed38ed5981eac5834d955"
+    },
+    "rotary_and_metadata_check": "passed"
+  },
+  "source_sha256": {
+    "streaming/session.py": "a5912e9f88a53e8ed0d473ddccaf254ab7c0ba006edae8fcee590d614f011d64",
+    "streaming/backend.py": "59560b5beee9315fa24c930cb305c640bd85c0ee9112b859425c460ee872e239",
+    "serving/run.py": "d612fd8bd4edc5cb63705077fbf11947efaaebe078cad5f261c0ed10de4ff351",
+    "scripts/check_streaming.py": "e14af3e09fbf1ff3fb07d04f794d1e12ccd6ccf81215cb1ebccfb8442abb30ea"
+  },
+  "ignore_eos": true,
+  "workload": "repeated telemetry prose plus a station-code update; conformance, not general language quality"
+}

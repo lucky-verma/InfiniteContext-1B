@@ -1,0 +1,70 @@
+{
+  "status": "completed",
+  "scores": {
+    "rolling/recent": {
+      "correct": 3,
+      "total": 3
+    },
+    "anchors/recent": {
+      "correct": 3,
+      "total": 3
+    },
+    "refill/recent": {
+      "correct": 3,
+      "total": 3
+    },
+    "retrieval/recent": {
+      "correct": 3,
+      "total": 3
+    },
+    "rolling/distant": {
+      "correct": 0,
+      "total": 3
+    },
+    "anchors/distant": {
+      "correct": 0,
+      "total": 3
+    },
+    "refill/distant": {
+      "correct": 0,
+      "total": 3
+    },
+    "retrieval/distant": {
+      "correct": 3,
+      "total": 3
+    },
+    "rolling/conflicting": {
+      "correct": 3,
+      "total": 3
+    },
+    "anchors/conflicting": {
+      "correct": 3,
+      "total": 3
+    },
+    "refill/conflicting": {
+      "correct": 3,
+      "total": 3
+    },
+    "retrieval/conflicting": {
+      "correct": 3,
+      "total": 3
+    },
+    "rolling/absent": {
+      "correct": 3,
+      "total": 3
+    },
+    "anchors/absent": {
+      "correct": 3,
+      "total": 3
+    },
+    "refill/absent": {
+      "correct": 3,
+      "total": 3
+    },
+    "retrieval/absent": {
+      "correct": 3,
+      "total": 3
+    }
+  },
+  "scope": "synthetic retention diagnostic; retrieval policy explicitly reinjects up to two matching committed records"
+}

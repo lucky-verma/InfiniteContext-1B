@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "image_id": "sha256:e72550eae86c4c85bb067f3fd7193751e102a8970f63f5ffe6d4d13f6d7f6f3f",
+  "unauthenticated_request": "rejected",
+  "session_commit": "passed",
+  "container_restart_replay": "passed",
+  "authenticated_prometheus_scrape": "passed",
+  "recovery_seconds": 6.159237227999256,
+  "files": {
+    "serving/Dockerfile": "664ae508239f184615c4a732b7e67b04bd60b11d9faed9177c8b3e0cb6aa5eed",
+    "serving/compose.yaml": "b17d6295c07970793812544e595d726f0f28d1112fc0dd9f841a018869796605",
+    "infra/monitoring/compose.yaml": "6ed278f5c24393625da2417b58aacc742939f899e7f3e8027e52e3ff5adf0af1",
+    "infra/monitoring/prometheus.yaml": "912226a1290b402fb0c3bce72b28fdd3bdbd9df69e730dd152f153524f476d7b"
+  },
+  "scope": "single-session CPU container deployment; multi-session admission, GPU containers and autoscaling remain separate checks"
+}

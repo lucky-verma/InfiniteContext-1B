@@ -1,0 +1,14 @@
+{
+  "vocab_size": 50257,
+  "hidden_size": 1536,
+  "num_layers": 32,
+  "intermediate_size": 4352,
+  "num_heads": 16,
+  "kv_rank": 256,
+  "q_rank": 512,
+  "nope_dim": 64,
+  "rope_dim": 64,
+  "value_dim": 128,
+  "rope_theta": 10000.0,
+  "norm_eps": 1e-06
+}

@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "hardware": "NVIDIA GeForce RTX 2070 SUPER, 580.178.04, 7065, 30",
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "optimizer_steps": 8,
+  "cpu_cuda_max_abs_weight_difference": 1.5273690223693848e-07,
+  "cuda_resume_max_abs_weight_difference": 0.0,
+  "data_sha256": "eb2b58d89f63bf8c13b14730b52a3687e6bcfe03f4a7ee2dd48dfc80bb192fb7",
+  "source_sha256": {
+    "training/run.py": "5492ebbd4749052101c060d831d82ec74f3d03dabf27d20303994fd009151b84",
+    "training/src/modeling_mla.py": "77ca1e02403986c9d89f061076a4e8b60d5d63e41577c8554f8d48dcc3933c97",
+    "training/checkpoint.py": "4b4013d733f546afc10602222403b04846c27e54b9eca8a75acbaf60bd0b975e",
+    "scripts/check_training_cuda.py": "7f72a2f4d881ed5fa4ac058fcee6d33c616e78e934edd49ffd1b453d10eec7dd"
+  },
+  "scope": "small single-GPU FP32 training/resume equivalence; no 1B or distributed GPU scaling claim"
+}

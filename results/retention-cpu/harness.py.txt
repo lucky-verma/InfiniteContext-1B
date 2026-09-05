@@ -1,0 +1,120 @@
+"""Measure recent, evicted, conflicting and absent facts on a live native backend.
+
+Uses the pinned model's text-only, thinking-disabled chat template. Synthetic
+probes diagnose retention; their scores are not a general language benchmark.
+"""
+
+import argparse
+from collections import defaultdict
+import hashlib
+import json
+from pathlib import Path
+import random
+import sys
+import tempfile
+import time
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from streaming.backend import json_request
+from streaming.session import Session
+
+
+def probes(seeds):
+    for seed in range(seeds):
+        rng = random.Random(9100 + seed)
+        code, old = [f'{rng.randrange(100000, 999999)}' for _ in range(2)]
+        for kind in ('recent', 'distant', 'conflicting', 'absent'):
+            chunks = ['<|im_start|>user\nThese are ordered station log records.\n']
+            if kind in ('distant', 'conflicting'):
+                chunks.append(f'The current access code is {old if kind == "conflicting" else code}.\n')
+            chunks += ['The instrument reports normal pressure and steady temperature. No alarm is active.\n' * 10 for _ in range(8)]
+            if kind in ('recent', 'conflicting'):
+                chunks.append(f'Latest update: the current access code is {code}.\n')
+            chunks.append('What is the current access code in the station records? Reply with only its six digits. '
+                          'If the code is unavailable, reply with only UNKNOWN.\n<|im_end|>\n'
+                          '<|im_start|>assistant\n<think>\n\n</think>\n\n')
+            yield {'seed': seed, 'kind': kind, 'chunks': chunks, 'expected': 'UNKNOWN' if kind == 'absent' else code}
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--endpoint', default='http://127.0.0.1:18081')
+    parser.add_argument('--window', type=int, default=512)
+    parser.add_argument('--seeds', type=int, default=3)
+    parser.add_argument('--output', type=Path, required=True)
+    args = parser.parse_args()
+    if args.window < 512 or not 1 <= args.seeds <= 100:
+        parser.error('window must be >=512 and seeds in 1..100')
+    args.output.mkdir(parents=True, exist_ok=False)
+    key = (ROOT / '.sessions/backend.key').read_text().strip()
+    metadata = {'window': args.window, 'generation_limit': 64, 'temperature': 0, 'seeds': args.seeds,
+                'model': json.loads((ROOT/'serving/model.json').read_text()),
+                'runtime': json.loads((ROOT/'serving/runtime.json').read_text()),
+                'sources': {p: hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in
+                            ('scripts/evaluate_retention.py', 'streaming/session.py', 'streaming/backend.py')},
+                'template_source': 'https://huggingface.co/Qwen/Qwen3.5-0.8B/blob/2fc06364715b967f1860aea9cf38778875588b17/tokenizer_config.json',
+                'scope': 'synthetic retention diagnostic; retrieval policy explicitly reinjects up to two matching committed records'}
+    (args.output/'metadata.json').write_text(json.dumps(metadata, indent=2)+'\n')
+    counts = defaultdict(lambda: {'correct': 0, 'total': 0})
+    with (args.output/'predictions.jsonl').open('x') as output:
+        for probe in probes(args.seeds):
+            for policy in ('rolling', 'anchors', 'refill', 'retrieval'):
+                anchors = 0 if policy == 'rolling' else 4
+                with tempfile.TemporaryDirectory(dir=ROOT/'.sessions') as temporary:
+                    started = time.monotonic()
+                    session_id = None
+                    try:
+                        with Session(Path(temporary)/'session.sqlite', endpoint=args.endpoint,
+                                     window=args.window, anchors=anchors) as session:
+                            session_id = session.state['session_id']
+                            retrieved = []
+                            if policy != 'refill':
+                                for i, chunk in enumerate(probe['chunks']):
+                                    if policy == 'retrieval' and i == len(probe['chunks']) - 1:
+                                        retrieved = session.search('"access code"', limit=2)
+                                        context = '\nRetrieved source records (sequence order):\n' + ''.join(
+                                            f"Record {r['sequence']}: {r['text']}" for r in reversed(retrieved))
+                                        # The append boundary still enforces the total window;
+                                        # this diagnostic never bypasses its token budget.
+                                        chunk = context + chunk
+                                    result = list(session.append(str(i), chunk, generate=64 if i == len(probe['chunks']) - 1 else 0))[-1]
+                                answer = result['text']
+                                input_tokens, active = session.state['input_tokens'], result['active_tokens']
+                            else:
+                                # Independent reset-and-prefill baseline: same anchors/window
+                                # accounting, with recurrent/cache state erased for every chunk.
+                                active_ids, input_tokens = [], 0
+                                for i, chunk in enumerate(probe['chunks']):
+                                    incoming = session.rpc('/tokenize', {'content': chunk, 'add_special': False, 'parse_special': True})['tokens']
+                                    generate = 64 if i == len(probe['chunks']) - 1 else 0
+                                    input_tokens += len(incoming)
+                                    combined = active_ids + incoming
+                                    drop = max(0, len(combined) - (args.window - generate - 1))
+                                    active_ids = combined[:anchors] + combined[anchors+drop:] if drop else combined
+                                    session.rpc('/slots/0?action=erase', {})
+                                    raw = session.rpc('/completion', {**session.payload(active_ids, generate), 'stream': False})
+                                answer, active = raw['content'], len(active_ids) + len(raw.get('tokens', []))
+                            assert input_tokens > args.window * 2
+                            assert active < args.window
+                        record = {**probe, 'policy': policy, 'answer': answer,
+                                  'retrieved_records': retrieved,
+                                  'exact_match': answer.strip().strip('`". \n') == probe['expected'],
+                                  'input_tokens': input_tokens, 'active_tokens': active,
+                                  'seconds': time.monotonic() - started}
+                        counts[policy+'/'+probe['kind']]['correct'] += int(record['exact_match'])
+                        counts[policy+'/'+probe['kind']]['total'] += 1
+                        output.write(json.dumps(record)+'\n')
+                        output.flush()
+                        print(f"{policy}/{probe['kind']}/{probe['seed']}: match={record['exact_match']} answer={answer!r}", flush=True)
+                    finally:
+                        if session_id:
+                            for path in (ROOT/'.sessions/kv').glob(session_id+'-*.bin'):
+                                path.unlink()
+    summary = {'status': 'completed', 'scores': dict(counts), 'scope': metadata['scope']}
+    (args.output/'summary.json').write_text(json.dumps(summary, indent=2)+'\n')
+
+
+if __name__ == '__main__':
+    main()

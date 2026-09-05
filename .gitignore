@@ -222,5 +222,19 @@ __marimo__/
 CLAUDE.local.md
 .ccmanager.json
 
+# Downloaded model weights; serving/model.json records their identity.
+.models/
+
 # Editor-local configuration
 .cursor/
+
+# Local runtime source/builds and private session data.
+.runtime/
+.sessions/
+
+# Training data, weights and local experiment records.
+.data/
+.runs/
+*.pt
+*.safetensors
+*.gguf

@@ -1,0 +1,331 @@
+diff --git a/src/llama-kv-cache.cpp b/src/llama-kv-cache.cpp
+index f22054c3d6a71e4ec3f609194128e808a3b88e5e..821d31437a0fe67bd5f6cc23f00cc059cb21eae3 100644
+--- a/src/llama-kv-cache.cpp
++++ b/src/llama-kv-cache.cpp
+@@ -574,7 +574,7 @@ void llama_kv_cache::seq_add(llama_seq_id seq_id, llama_pos p0, llama_pos p1, ll
+     }
+ 
+     GGML_ASSERT(seq_id >= 0 && (size_t) seq_id < seq_to_stream.size());
+-    GGML_ASSERT(hparams.n_pos_per_embd() == 1 && "seq_add() is only supported for n_pos_per_embd() == 1");
++    GGML_ASSERT(get_can_shift() && "seq_add() requires a supported position translation");
+ 
+     auto & cells = v_cells[seq_to_stream[seq_id]];
+     auto & head  = v_heads[seq_to_stream[seq_id]];
+@@ -604,7 +604,7 @@ void llama_kv_cache::seq_add(llama_seq_id seq_id, llama_pos p0, llama_pos p1, ll
+         }
+ 
+         if (cells.seq_has(i, seq_id)) {
+-            if (cells.pos_add(i, shift)) {
++            if (cells.pos_add(i, shift, hparams.n_pos_per_embd() > 1)) {
+                 if (new_head == cells.size()) {
+                     new_head = i;
+                 }
+@@ -1190,7 +1190,10 @@ bool llama_kv_cache::get_can_shift() const {
+     if (model.arch == LLM_ARCH_STEP35) {
+         return false;
+     }
+-    if (hparams.n_pos_per_embd() > 1) {
++    // build_rope_shift uses a uniform NEOX translation for these multi-position modes.
++    if (hparams.n_pos_per_embd() > 1 &&
++            hparams.rope_type != LLAMA_ROPE_TYPE_MROPE &&
++            hparams.rope_type != LLAMA_ROPE_TYPE_IMROPE) {
+         return false;
+     }
+     return true;
+diff --git a/src/llama-kv-cells.h b/src/llama-kv-cells.h
+index 5d567a6ed0b8efb126c4a462f0ca5cffa4af8573..46a68bf43775cd982a6b1a9afd72c623e467a610 100644
+--- a/src/llama-kv-cells.h
++++ b/src/llama-kv-cells.h
+@@ -437,7 +437,7 @@ public:
+     // pos[i] = pos[i] + d
+     // sets "has_shift" to true
+     // note: call only if the cell is not empty
+-    bool pos_add(uint32_t i, llama_pos d) {
++    bool pos_add(uint32_t i, llama_pos d, bool shift_spatial = false) {
+         assert(i < pos.size());
+         assert(pos[i] != -1);
+ 
+@@ -451,6 +451,7 @@ public:
+         if (pos[i] < 0) {
+             seq[i].reset();
+             pos[i] = -1;
++            ext[i].reset();
+             shift[i] = 0;
+ 
+             used.erase(i);
+@@ -458,6 +459,11 @@ public:
+             return true;
+         }
+ 
++        if (shift_spatial) {
++            ext[i].x += d;
++            ext[i].y += d;
++        }
++
+         seq_pos_add(i);
+ 
+         return false;
+diff --git a/tests/test-rope.cpp b/tests/test-rope.cpp
+index 801e4cd8270931adbef96d247f929035869be939..ea4b7d4802cae01facb3500989d195ebb31b002b 100644
+--- a/tests/test-rope.cpp
++++ b/tests/test-rope.cpp
+@@ -1,5 +1,6 @@
+ #include "ggml.h"
+ #include "ggml-cpu.h"
++#include "../src/llama-kv-cells.h"
+ 
+ #include <cmath>
+ #include <cstdio>
+@@ -125,6 +126,31 @@ static void ggml_graph_compute_helper(std::vector<uint8_t> & buf, ggml_cgraph *
+ }
+ 
+ int main(int /*argc*/, const char ** /*argv*/) {
++    {
++        llama_kv_cells cells;
++        cells.resize(2);
++        for (uint32_t i = 0; i < 2; ++i) {
++            cells.pos_set(i, 100 + i);
++            cells.ext_set(i, {100 + (llama_pos) i, 102 + (llama_pos) i, 7});
++            cells.seq_add(i, 0);
++        }
++        GGML_ASSERT(!cells.pos_add(1, -67, true));
++        GGML_ASSERT(cells.pos_get(1) == 34);
++        GGML_ASSERT(cells.ext_get(1).x == 34 && cells.ext_get(1).y == 36);
++        GGML_ASSERT(cells.get_shift(1) == -67 && cells.ext_get(1).tok == 7);
++        GGML_ASSERT(cells.seq_pos_min(0) == 34 && cells.seq_pos_max(0) == 100);
++        GGML_ASSERT(cells.ext_get(0).x == 100 && cells.ext_get(0).y == 102);
++        GGML_ASSERT(!cells.pos_add(0, 5));
++        GGML_ASSERT(cells.pos_get(0) == 105 && cells.ext_get(0).x == 100);
++        GGML_ASSERT(cells.pos_add(1, -100, true));
++        GGML_ASSERT(cells.is_empty(1) && cells.get_used() == 1);
++        cells.reset_shift();
++        llama_kv_cells restored;
++        restored.resize(2);
++        restored.set(0, cells.cp(0, 2));
++        GGML_ASSERT(restored.pos_get(0) == 105 && restored.ext_get(0).tok == 7);
++    }
++
+     struct ggml_init_params params = {
+         /* .mem_size   = */ 128*1024*1024,
+         /* .mem_buffer = */ NULL,
+@@ -150,6 +176,7 @@ int main(int /*argc*/, const char ** /*argv*/) {
+         struct ggml_tensor * r0;
+         struct ggml_tensor * r1;
+         struct ggml_tensor * r2;
++        struct ggml_tensor * r_shift = nullptr;
+         x = get_random_tensor_f32(ctx0, ndims, ne, -1.0f, 1.0f);
+         int mode = -1;
+ 
+@@ -210,6 +237,13 @@ int main(int /*argc*/, const char ** /*argv*/) {
+             r2 = ggml_rope_multi(
+                 ctx0, x, p2, nullptr,
+                 n_rot, sections, mode, 32768, 1000000, 1, 0, 1, 32, 1);
++
++            if (mode == GGML_ROPE_TYPE_MROPE || mode == GGML_ROPE_TYPE_IMROPE) {
++                // Match the scalar translation used by the KV-cache shift graph.
++                struct ggml_tensor * delta = ggml_view_1d(ctx0, p1, ne[2], 0);
++                r_shift = ggml_rope_ext(ctx0, r0, delta, nullptr,
++                    n_rot, GGML_ROPE_TYPE_NEOX, 32768, 1000000, 1, 0, 1, 32, 1);
++            }
+         }
+ 
+         ggml_cgraph * gf = ggml_new_graph(ctx0);
+@@ -217,6 +251,9 @@ int main(int /*argc*/, const char ** /*argv*/) {
+         ggml_build_forward_expand(gf, r0);
+         ggml_build_forward_expand(gf, r1);
+         ggml_build_forward_expand(gf, r2);
++        if (r_shift) {
++            ggml_build_forward_expand(gf, r_shift);
++        }
+ 
+         ggml_graph_compute_helper(work_buffer, gf, 4);
+ 
+@@ -254,6 +291,15 @@ int main(int /*argc*/, const char ** /*argv*/) {
+ 
+             GGML_ASSERT(diff / sum0 < 0.0001f);
+             GGML_ASSERT(diff / sum1 < 0.0001f);
++            if (r_shift) {
++                const float * shifted = (const float *) r_shift->data;
++                double shift_diff = 0.0;
++                for (int i = 0; i < n_elements; ++i) {
++                    shift_diff += fabs(shifted[i] - r2_data[i]);
++                }
++                printf("scalar KV shift rel err: %f\n", shift_diff / sum1);
++                GGML_ASSERT(shift_diff / sum1 < 0.0001f);
++            }
+         }
+     }
+ 
+diff --git a/tools/server/server-context.cpp b/tools/server/server-context.cpp
+index f78cfb36dd7dbeae8a144319d6d328ec5a1fda0f..947a010e36f0b53375ac0869c3194f2e6ef97134 100644
+--- a/tools/server/server-context.cpp
++++ b/tools/server/server-context.cpp
+@@ -406,6 +406,18 @@ struct server_slot {
+         mbatch.reset();
+     }
+ 
++    void shift_cached_tokens(int n_keep, int n_discard) {
++        GGML_ASSERT(!prompt.tokens.has_mtmd);
++        GGML_ASSERT(n_keep >= 0 && n_discard >= 0 && n_keep + n_discard < prompt.n_tokens());
++        mem.seq_rm(id, n_keep, n_keep + n_discard);
++        mem.seq_add(id, n_keep + n_discard, prompt.tokens.pos_next(), -n_discard);
++        llama_tokens tokens = prompt.tokens.get_tokens();
++        tokens.erase(tokens.begin() + n_keep, tokens.begin() + n_keep + n_discard);
++        prompt.clear();
++        prompt.tokens.insert(tokens);
++        truncated = true;
++    }
++
+     void init_sampler() const {
+         common_sampler_reset(smpl.get());
+ 
+@@ -2932,26 +2944,7 @@ private:
+ 
+                 SLT_WRN(slot, "slot context shift, n_keep = %d, n_left = %d, n_discard = %d\n", n_keep, n_left, n_discard);
+ 
+-                slot.mem.seq_rm (slot.id, n_keep            , n_keep + n_discard);
+-                slot.mem.seq_add(slot.id, n_keep + n_discard, slot.prompt.tokens.pos_next(), -n_discard);
+-
+-                // add generated tokens to cache
+-                // ref: https://github.com/ggml-org/llama.cpp/pull/16818#discussion_r2473269481
+-                {
+-                    GGML_ASSERT(!slot.prompt.tokens.has_mtmd);
+-
+-                    llama_tokens new_tokens = slot.prompt.tokens.get_tokens(); // copy
+-                    for (size_t i = n_keep + n_discard; i < new_tokens.size(); i++) {
+-                        new_tokens[i - n_discard] = new_tokens[i];
+-                    }
+-
+-                    new_tokens.resize(slot.prompt.tokens.size() - n_discard);
+-
+-                    slot.prompt.clear();
+-                    slot.prompt.tokens.insert(new_tokens);
+-                }
+-
+-                slot.truncated = true;
++                slot.shift_cached_tokens(n_keep, n_discard);
+             }
+         });
+ 
+@@ -3199,6 +3192,36 @@ private:
+                             }
+ 
+                             if (slot.task->params.cache_prompt) {
++                                const int n_shift = slot.task->params.n_cache_shift;
++                                if (n_shift > 0) {
++                                    if (params_base.cache_ram_mib != 0) {
++                                        send_error(slot, "n_cache_shift requires --cache-ram 0", ERROR_TYPE_INVALID_REQUEST);
++                                        slot.release();
++                                        return;
++                                    }
++                                    const int n_keep = slot.task->params.n_keep;
++                                    const int n_cached = slot.prompt.n_tokens();
++                                    bool valid = params_base.ctx_shift && !mctx && !slot.prompt.tokens.has_mtmd &&
++                                                 !slot.task->tokens.has_mtmd && !slot.task->is_parent() && !slot.task->is_child() &&
++                                                 n_keep >= 0 && n_keep < n_cached && n_shift < n_cached - n_keep &&
++                                                 input_tokens.size() >= (size_t) (n_cached - n_shift);
++                                    if (valid) {
++                                        for (int i = 0; i < n_cached - n_shift; ++i) {
++                                            const int previous = i < n_keep ? i : i + n_shift;
++                                            if (input_tokens[i] != slot.prompt.tokens[previous]) {
++                                                valid = false;
++                                                break;
++                                            }
++                                        }
++                                    }
++                                    if (!valid) {
++                                        send_error(slot, "n_cache_shift does not match the retained stream state", ERROR_TYPE_INVALID_REQUEST);
++                                        slot.release();
++                                        return;
++                                    }
++                                    slot.shift_cached_tokens(n_keep, n_shift);
++                                    SLT_INF(slot, "explicit cache shift, n_keep = %d, n_discard = %d\n", n_keep, n_shift);
++                                }
+                                 // reuse any previously computed tokens that are common with the new prompt
+                                 n_past = slot.prompt.tokens.get_common_prefix(input_tokens);
+ 
+@@ -3268,6 +3291,11 @@ private:
+                                     SLT_DBG(slot, "after context reuse, new n_past = %d\n", n_past);
+                                 }
+                             } else {
++                                if (slot.task->params.n_cache_shift > 0) {
++                                    send_error(slot, "n_cache_shift requires cache_prompt", ERROR_TYPE_INVALID_REQUEST);
++                                    slot.release();
++                                    return;
++                                }
+                                 // if we don't cache the prompt, we have to remove all previous tokens
+                                 n_past = 0;
+                             }
+@@ -3817,6 +3845,17 @@ private:
+ 
+                 GGML_ASSERT(slot.task->need_sampling());
+ 
++                if (slot.task->params.n_predict == 0) {
++                    llama_synchronize(slot.ctx_tgt);
++                    slot.stats.update_prompt_last();
++                    slot.stats.update_gen_last();
++                    slot.stop = STOP_TYPE_LIMIT;
++                    send_final_response(slot);
++                    slot.release();
++                    slot.i_batch = -1;
++                    return;
++                }
++
+                 // prompt evaluated for next-token prediction
+                 slot.state = SLOT_STATE_GENERATING;
+ 
+@@ -4596,6 +4635,7 @@ static json get_res_props(const server_context_meta & meta, const common_params
+     json props = {
+         { "default_generation_settings", default_generation_settings_for_props },
+         { "total_slots",                 params.n_parallel },
++        { "cache_ram_mib",               params.cache_ram_mib },
+         { "model_alias",                 meta.model_name },
+         { "model_ftype",                 meta.model_ftype },
+         { "model_path",                  meta.model_path },
+diff --git a/tools/server/server-schema.cpp b/tools/server/server-schema.cpp
+index 64b9251295ce6445e1814dcfe1280e2259783117..bfb6ec8c68add4446bea0de77a25c1e9e6a7f996 100644
+--- a/tools/server/server-schema.cpp
++++ b/tools/server/server-schema.cpp
+@@ -68,6 +68,10 @@ std::vector<std::unique_ptr<field>> make_llama_cmpl_schema(const common_params &
+         ->set_hard_limits(0, INT32_MAX)
+         ->set_desc("Min chunk size to attempt reusing from the cache via KV shifting. See --cache-reuse arg"));
+ 
++    add((new field_num("n_cache_shift", params.n_cache_shift))
++        ->set_hard_limits(0, INT32_MAX)
++        ->set_desc("Remove this many cached tokens after n_keep; the supplied prompt must match the retained prefix and tail"));
++
+     // TODO: implement t_max_prompt_ms
+     // add((new field_num("t_max_prompt_ms", params.t_max_prompt_ms))
+ 
+diff --git a/tools/server/server-task.cpp b/tools/server/server-task.cpp
+index 0d3beb313ceabbb903de57d185140a8e5a079e4b..0066adb541d288f9ff61cd1ed0043f0f4292a0e7 100644
+--- a/tools/server/server-task.cpp
++++ b/tools/server/server-task.cpp
+@@ -69,6 +69,7 @@ json task_params::to_json(bool only_metrics) const {
+             {"n_predict",                 n_predict}, // TODO: deduplicate?
+             {"n_keep",                    n_keep},
+             {"n_discard",                 n_discard},
++            {"n_cache_shift",             n_cache_shift},
+             {"ignore_eos",                sampling.ignore_eos},
+             {"stream",                    stream},
+             {"n_probs",                   sampling.n_probs},
+@@ -123,6 +124,7 @@ json task_params::to_json(bool only_metrics) const {
+         {"n_predict",                 n_predict}, // TODO: deduplicate?
+         {"n_keep",                    n_keep},
+         {"n_discard",                 n_discard},
++        {"n_cache_shift",             n_cache_shift},
+         {"ignore_eos",                sampling.ignore_eos},
+         {"stream",                    stream},
+         {"logit_bias",                format_logit_bias(sampling.logit_bias)},
+diff --git a/tools/server/server-task.h b/tools/server/server-task.h
+index 9c99143f8e1983f2cbe45245d68d8e5937b7f6c6..e8a37397202954c1d194122b307d21b1a088d756 100644
+--- a/tools/server/server-task.h
++++ b/tools/server/server-task.h
+@@ -63,6 +63,7 @@ struct task_params {
+     int32_t n_cmpl    =  1; // number of completions to generate from this prompt
+ 
+     int32_t n_cache_reuse = 0; // min chunk size to attempt reusing from the cache via KV shifting (0 = disabled)
++    int32_t n_cache_shift = 0; // explicit removal after n_keep before evaluating an updated stream window
+ 
+     int64_t t_max_prompt_ms  = -1; // TODO: implement
+     int64_t t_max_predict_ms = -1; // if positive, limit the generation phase to this time limit

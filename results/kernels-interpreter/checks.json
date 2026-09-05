@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "execution": "CPU interpreter",
+  "torch": "2.8.0+cpu",
+  "triton": "3.4.0",
+  "cases": [
+    {
+      "op": "rmsnorm+rope",
+      "dtype": "torch.float32",
+      "width": 12,
+      "rope_max_abs_error": 0.00045478343963623047
+    },
+    {
+      "op": "rmsnorm+rope",
+      "dtype": "torch.float32",
+      "width": 64,
+      "rope_max_abs_error": 0.0007233619689941406
+    },
+    {
+      "op": "rmsnorm+rope",
+      "dtype": "torch.float32",
+      "width": 256,
+      "rope_max_abs_error": 0.0030204057693481445
+    },
+    {
+      "op": "mla_decode",
+      "dtype": "torch.float32",
+      "tokens": 1,
+      "max_abs_error": 0.0
+    },
+    {
+      "op": "mla_decode",
+      "dtype": "torch.float32",
+      "tokens": 33,
+      "max_abs_error": 3.5762786865234375e-07
+    },
+    {
+      "op": "mla_decode",
+      "dtype": "torch.float32",
+      "tokens": 257,
+      "max_abs_error": 5.364418029785156e-07
+    },
+    {
+      "op": "rmsnorm+rope",
+      "dtype": "torch.float16",
+      "width": 12,
+      "rope_max_abs_error": 0.0009765625
+    },
+    {
+      "op": "rmsnorm+rope",
+      "dtype": "torch.float16",
+      "width": 64,
+      "rope_max_abs_error": 0.0009765625
+    },
+    {
+      "op": "rmsnorm+rope",
+      "dtype": "torch.float16",
+      "width": 256,
+      "rope_max_abs_error": 0.001953125
+    },
+    {
+      "op": "mla_decode",
+      "dtype": "torch.float16",
+      "tokens": 1,
+      "max_abs_error": 0.0
+    },
+    {
+      "op": "mla_decode",
+      "dtype": "torch.float16",
+      "tokens": 33,
+      "max_abs_error": 0.0
+    },
+    {
+      "op": "mla_decode",
+      "dtype": "torch.float16",
+      "tokens": 257,
+      "max_abs_error": 0.0
+    }
+  ],
+  "kernel_sha256": "c01fcfca4cc92388d688e10a0e0419e254302ba9eec5d32756ed92fa6cfbebfe",
+  "scope": "numerical reference checks; no end-to-end speedup claim"
+}

@@ -1,0 +1,3 @@
+# Preserve exact diagnostic bytes and unified-diff context lines.
+results/** -whitespace linguist-generated=true
+patches/llama.cpp/*.patch -whitespace

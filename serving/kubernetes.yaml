@@ -1,0 +1,127 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: infinitecontext
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: model
+  namespace: infinitecontext
+spec:
+  clusterIP: None
+  selector:
+    app: infinitecontext
+  ports:
+    - name: http
+      port: 18081
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: model
+  namespace: infinitecontext
+spec:
+  serviceName: model
+  replicas: 1
+  selector:
+    matchLabels:
+      app: infinitecontext
+  template:
+    metadata:
+      labels:
+        app: infinitecontext
+    spec:
+      automountServiceAccountToken: false
+      terminationGracePeriodSeconds: 30
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      initContainers:
+        - name: weights
+          image: infinitecontext:local
+          imagePullPolicy: Never
+          command: [python3, scripts/fetch_model.py]
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: [ALL]
+          resources:
+            requests:
+              cpu: '100m'
+              memory: 128Mi
+            limits:
+              cpu: '1'
+              memory: 512Mi
+          volumeMounts:
+            - name: models
+              mountPath: /app/.models
+      containers:
+        - name: model
+          image: infinitecontext:local
+          imagePullPolicy: Never
+          args: [--host, 0.0.0.0, --window, '512']
+          ports:
+            - name: http
+              containerPort: 18081
+          resources:
+            requests:
+              cpu: '1'
+              memory: 1500Mi
+            limits:
+              cpu: '2'
+              memory: 3Gi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: [ALL]
+          startupProbe:
+            httpGet:
+              path: /health
+              port: http
+            periodSeconds: 5
+            failureThreshold: 24
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            periodSeconds: 15
+            failureThreshold: 4
+          volumeMounts:
+            - name: models
+              mountPath: /app/.models
+              readOnly: true
+            - name: sessions
+              mountPath: /app/.sessions
+            - name: temporary
+              mountPath: /tmp
+      volumes:
+        - name: temporary
+          emptyDir:
+            sizeLimit: 64Mi
+  volumeClaimTemplates:
+    - metadata:
+        name: models
+      spec:
+        accessModes: [ReadWriteOnce]
+        resources:
+          requests:
+            storage: 2Gi
+    - metadata:
+        name: sessions
+      spec:
+        accessModes: [ReadWriteOnce]
+        resources:
+          requests:
+            storage: 2Gi

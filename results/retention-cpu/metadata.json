@@ -1,0 +1,43 @@
+{
+  "window": 512,
+  "generation_limit": 64,
+  "temperature": 0,
+  "seeds": 3,
+  "model": {
+    "purpose": "streaming-runtime compatibility candidate; not a validated benchmark default",
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "base_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "repository": "ggml-org/Qwen3.5-0.8B-GGUF",
+    "revision": "8fea620810c4afa23dd6443f999a48574c1611a3",
+    "filename": "Qwen3.5-0.8B-Q8_0.gguf",
+    "sha256": "37ae482d336108d23516fa35e8e0c4126688d81018b87178a18d752a1357814f",
+    "size_bytes": 833592096,
+    "license": "apache-2.0",
+    "source": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+    "artifact_source": "https://huggingface.co/ggml-org/Qwen3.5-0.8B-GGUF"
+  },
+  "runtime": {
+    "repository": "https://github.com/ggml-org/llama.cpp.git",
+    "revision": "6703d7894c70e8b076ce4608157d056e42e6889c",
+    "patch": "patches/llama.cpp/streaming-context.patch",
+    "patch_sha256": "c3e59dec5beb6debf3b92f49a4fdc11d4fe8b168bcc963af195b25c54ee40d9f",
+    "build_flags": [
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DGGML_NATIVE=ON",
+      "-DLLAMA_BUILD_TESTS=ON",
+      "-DLLAMA_BUILD_TOOLS=ON",
+      "-DLLAMA_BUILD_UI=OFF",
+      "-DLLAMA_USE_PREBUILT_UI=OFF"
+    ],
+    "protocol": "position-aware-stream-v1"
+  },
+  "sources": {
+    "scripts/evaluate_retention.py": "c2e21aec68516867d00f46ecf112e9c591ecba0f4fbb8500bc02a5f25c41595e",
+    "streaming/session.py": "a5912e9f88a53e8ed0d473ddccaf254ab7c0ba006edae8fcee590d614f011d64",
+    "streaming/backend.py": "59560b5beee9315fa24c930cb305c640bd85c0ee9112b859425c460ee872e239"
+  },
+  "template_source": "https://huggingface.co/Qwen/Qwen3.5-0.8B/blob/2fc06364715b967f1860aea9cf38778875588b17/tokenizer_config.json",
+  "scope": "synthetic retention diagnostic; retrieval policy explicitly reinjects up to two matching committed records",
+  "harness_snapshot": "harness.py.txt",
+  "source_note": "The archived harness matches the execution hash. The current script removes an unused import and redundant key-file read; workload and scoring are unchanged."
+}

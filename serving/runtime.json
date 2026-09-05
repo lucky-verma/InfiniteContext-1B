@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/ggml-org/llama.cpp.git",
+  "revision": "6703d7894c70e8b076ce4608157d056e42e6889c",
+  "patch": "patches/llama.cpp/streaming-context.patch",
+  "patch_sha256": "c3e59dec5beb6debf3b92f49a4fdc11d4fe8b168bcc963af195b25c54ee40d9f",
+  "build_flags": [
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DGGML_NATIVE=ON",
+    "-DLLAMA_BUILD_TESTS=ON",
+    "-DLLAMA_BUILD_TOOLS=ON",
+    "-DLLAMA_BUILD_UI=OFF",
+    "-DLLAMA_USE_PREBUILT_UI=OFF"
+  ],
+  "protocol": "position-aware-stream-v1"
+}

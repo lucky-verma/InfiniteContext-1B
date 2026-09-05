@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "kubernetes": "v1.36.4",
+  "image": "infinitecontext:validation",
+  "pod_replacement_replay": "passed",
+  "failed_rollout_observed": "passed",
+  "rollback_replay": "passed",
+  "restart_seconds": 8.121593360992847,
+  "rollback_seconds": 7.152891464007553,
+  "manifest_sha256": "7c2470a48dc61d7582172968dd419bb1d45e3fedfa4d57fcc13e71e0959442f7",
+  "scope": "single-replica CPU StatefulSet on local kind; GPU scheduling, autoscaling and multi-node storage are not validated"
+}

@@ -1,0 +1,13 @@
+{
+  "purpose": "pretrained reference for text-only streaming and retention experiments; distinct from the custom MLA model",
+  "base_model": "Qwen/Qwen3.5-0.8B",
+  "base_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "repository": "ggml-org/Qwen3.5-0.8B-GGUF",
+  "revision": "8fea620810c4afa23dd6443f999a48574c1611a3",
+  "filename": "Qwen3.5-0.8B-Q8_0.gguf",
+  "sha256": "37ae482d336108d23516fa35e8e0c4126688d81018b87178a18d752a1357814f",
+  "size_bytes": 833592096,
+  "license": "apache-2.0",
+  "source": "https://huggingface.co/Qwen/Qwen3.5-0.8B",
+  "artifact_source": "https://huggingface.co/ggml-org/Qwen3.5-0.8B-GGUF"
+}

@@ -57,6 +57,18 @@ attribution without adding AI co-author or attribution lines.
 
 ## Implementation and checks
 
+The owning implementations are `training/src/modeling_mla.py` (custom MLA),
+`training/run.py` (pretraining/alignment), `streaming/session.py` (durable
+session), and the pinned patch under `patches/llama.cpp/`. The pretrained native
+reference and custom MLA checkpoint/MLflow service are distinct execution paths.
+
+Run `python -m unittest discover -s tests -v` for CPU contracts. Native patch or
+session changes also require `scripts/check_streaming.py`; alignment/lifecycle
+changes require `scripts/check_pipeline.py` with the tracking dependencies.
+Triton interpreter checks, real CUDA checks, Compose checks, and Kubernetes
+checks have separate scripts and evidence scopes. Preserve exact source hashes
+with benchmark results; never relabel an earlier measurement as a new run.
+
 - Trace the complete affected flow and every caller before a shared-function
   fix. Prefer existing code, stdlib, native features, and installed dependencies.
 - Keep implementations small while preserving the requested capabilities,

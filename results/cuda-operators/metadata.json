@@ -1,0 +1,30 @@
+{
+  "backend": "cuda",
+  "source_revision": "6703d7894c70e8b076ce4608157d056e42e6889c",
+  "patch_sha256": "c3e59dec5beb6debf3b92f49a4fdc11d4fe8b168bcc963af195b25c54ee40d9f",
+  "build_flags": [
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DGGML_NATIVE=ON",
+    "-DLLAMA_BUILD_TESTS=ON",
+    "-DLLAMA_BUILD_TOOLS=ON",
+    "-DLLAMA_BUILD_UI=OFF",
+    "-DLLAMA_USE_PREBUILT_UI=OFF",
+    "-DGGML_CUDA=ON",
+    "-DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc",
+    "-DCMAKE_CUDA_ARCHITECTURES=native"
+  ],
+  "binary_sha256": "115a823d981971f66f2182645b6bc323fbe1f5469ee32ca0d28c68e9dfb14f1a",
+  "runtime_version": "version: 0.3.0-dev (build 1, commit 6703d78)\nbuilt with GNU 13.3.0 for Linux x86_64",
+  "artifact_sha256": {
+    "libggml-base.so.0.22.0": "505773546e043b27999b795db2b691163db2c96be490bbf0a37adeef76520eb2",
+    "libggml-cpu.so.0.22.0": "3171863283a623e18b832bc8b2fa95bae834ee63ec8de979bf4fe53a86f95a27",
+    "libggml-cuda.so.0.22.0": "5e240bd7e27e3b15f272b1dda39583f99ec25e8246eb51dfd9d13ea2eb2af8d0",
+    "libggml.so.0.22.0": "4d4faca9ffa86ada0206c9d9f4b37dc388a263ecf1bab9867a7dddcf0f52af7d",
+    "libllama-common.so.0.3.0": "f5d2b67501921a8aaa89a7cd8fabd3956ac3e639a913f9ba91f359a09f28da14",
+    "libllama-server-impl.so": "ac62092f67dc996d8656f7273dfa11fd0233d66d6dcf5f847a5c11cf5dd97d5a",
+    "libllama.so.0.3.0": "b01d1a2ed2014bbb7ce0e00ea239cda5c9c10a0a2f186da2c0d25cc5da51b882",
+    "libmtmd.so.0.3.0": "f1bb2b04cd37070851e6f64e23d9191d1df024429bfc741e2e06cf58b1b1d2c5",
+    "llama-server": "115a823d981971f66f2182645b6bc323fbe1f5469ee32ca0d28c68e9dfb14f1a"
+  },
+  "rotary_and_metadata_check": "passed"
+}

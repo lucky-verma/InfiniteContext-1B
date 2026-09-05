@@ -54,7 +54,7 @@ def scaled_dot_product_attention(
     query: torch.Tensor,   # (B, ..., L, D)
     key: torch.Tensor,     # (B, ..., S, D)
     value: torch.Tensor,   # (B, ..., S, D)
-    mask: torch.Tensor | None = None,  # (L, S) or broadcastable
+    mask: torch.Tensor | None = None,  # Boolean/0-1 keep mask; (L, S) or broadcastable
 ) -> torch.Tensor:
     """
     Compute scaled dot-product attention.
@@ -76,11 +76,18 @@ def scaled_dot_product_attention(
     # Step 2: Apply causal mask (for autoregressive / decoder models)
     # The mask prevents attending to future tokens
     if mask is not None:
+        if not torch.all((mask == 0) | (mask == 1)):
+            raise ValueError("mask must contain only 0/1 (or False/True)")
         scores = scores.masked_fill(mask == 0, float("-inf"))
+        # Empty rows contribute zero, without creating NaNs in the backward pass.
+        empty_rows = ~(mask != 0).any(dim=-1, keepdim=True)
+        scores = scores.masked_fill(empty_rows, 0)
 
     # Step 3: Softmax normalizes scores to probabilities
     # Each row sums to 1.0 — it's a weighted average
     weights = F.softmax(scores, dim=-1)
+    if mask is not None:
+        weights = weights.masked_fill(empty_rows, 0)
 
     # Step 4: Weighted sum of values
     # output[i] = sum(weights[i,j] * value[j] for j in range(S))
@@ -137,7 +144,9 @@ class MultiHeadAttention(nn.Module):
         """
         super().__init__()
 
-        assert d_model % n_heads == 0, f"d_model ({d_model}) must be divisible by n_heads ({n_heads})"
+        if (type(d_model) is not int or type(n_heads) is not int
+                or d_model <= 0 or n_heads <= 0 or d_model % n_heads):
+            raise ValueError("d_model and n_heads must be positive integers, with d_model divisible by n_heads")
 
         self.d_model = d_model
         self.n_heads = n_heads
@@ -165,6 +174,7 @@ class MultiHeadAttention(nn.Module):
             3. Compute attention per head
             4. Merge heads and project output
         """
+        self._validate_input(x)
         B, L, _ = x.shape
 
         # Step 1: Linear projections
@@ -190,6 +200,10 @@ class MultiHeadAttention(nn.Module):
         output = self.W_O(output)
 
         return output
+
+    def _validate_input(self, x: torch.Tensor) -> None:
+        if x.ndim != 3 or x.shape[-1] != self.d_model or not x.shape[0] or not x.shape[1]:
+            raise ValueError("x must have shape (positive batch, positive sequence, d_model)")
 
     def count_kv_cache_bytes(self, batch_size: int, seq_len: int, dtype=torch.float16) -> int:
         """
@@ -219,7 +233,7 @@ class MultiHeadAttention(nn.Module):
 # But the cache GROWS with every token — that's the memory bottleneck.
 
 
-class CachedMultiHeadAttention(nn.Module):
+class CachedMultiHeadAttention(MultiHeadAttention):
     """
     Multi-Head Attention with KV caching for autoregressive generation.
 
@@ -228,23 +242,12 @@ class CachedMultiHeadAttention(nn.Module):
     """
 
     def __init__(self, d_model: int, n_heads: int, max_seq_len: int = 8192):
-        super().__init__()
-
-        assert d_model % n_heads == 0
-
-        self.d_model = d_model
-        self.n_heads = n_heads
-        self.d_head = d_model // n_heads
+        super().__init__(d_model, n_heads)
+        if type(max_seq_len) is not int or max_seq_len <= 0:
+            raise ValueError("max_seq_len must be a positive integer")
         self.max_seq_len = max_seq_len
 
-        self.W_Q = nn.Linear(d_model, d_model, bias=False)
-        self.W_K = nn.Linear(d_model, d_model, bias=False)
-        self.W_V = nn.Linear(d_model, d_model, bias=False)
-        self.W_O = nn.Linear(d_model, d_model, bias=False)
-
-        # The KV cache — pre-allocated but filled incrementally
-        # Shape: (B, n_heads, max_seq_len, d_head)
-        # This is what eats your GPU memory!
+        # Cache holds only the consumed prefix, up to max_seq_len.
         self.cache_k: torch.Tensor | None = None
         self.cache_v: torch.Tensor | None = None
         self.cache_len = 0  # How many tokens are currently cached
@@ -267,31 +270,39 @@ class CachedMultiHeadAttention(nn.Module):
         Args:
             x: (B, L, d_model) where L=1 during generation, L=full during prefill
         """
+        self._validate_input(x)
         B, L, _ = x.shape
+        total_len = self.cache_len + L
+        if total_len > self.max_seq_len:
+            raise ValueError("request exceeds max_seq_len; reset the cache before a new sequence")
 
         # Project the new token(s)
         Q = rearrange(self.W_Q(x), "b l (h d) -> b h l d", h=self.n_heads)
         K_new = rearrange(self.W_K(x), "b l (h d) -> b h l d", h=self.n_heads)
         V_new = rearrange(self.W_V(x), "b l (h d) -> b h l d", h=self.n_heads)
 
-        # Append to cache
+        # Form the new prefix before committing it, so failed calls keep the old cache.
         if self.cache_k is None:
-            self.cache_k = K_new
-            self.cache_v = V_new
+            keys, values = K_new, V_new
         else:
-            # Concatenate along sequence dimension
-            self.cache_k = torch.cat([self.cache_k, K_new], dim=2)
-            self.cache_v = torch.cat([self.cache_v, V_new], dim=2)
-
-        self.cache_len = self.cache_k.size(2)
+            if (self.cache_k.shape[0] != B or self.cache_k.device != K_new.device
+                    or self.cache_k.dtype != K_new.dtype):
+                raise ValueError("batch, device, or dtype changed; reset the cache first")
+            # ponytail: concatenation copies the prefix; use fixed buffers if profiling warrants it.
+            keys = torch.cat([self.cache_k, K_new], dim=2)
+            values = torch.cat([self.cache_v, V_new], dim=2)
 
         # Attend to ALL cached keys and values
         # Q: (B, H, L_new, D)  K_cached: (B, H, L_total, D)
-        output = scaled_dot_product_attention(Q, self.cache_k, self.cache_v)
+        query_positions = self.cache_len + torch.arange(L, device=x.device)
+        key_positions = torch.arange(total_len, device=x.device)
+        causal = key_positions[None, :] <= query_positions[:, None]
+        output = scaled_dot_product_attention(Q, keys, values, mask=causal)
 
         output = rearrange(output, "b h l d -> b l (h d)")
         output = self.W_O(output)
 
+        self.cache_k, self.cache_v, self.cache_len = keys, values, total_len
         return output
 
     def get_cache_memory_bytes(self) -> int:
@@ -338,9 +349,8 @@ def analyze_kv_cache_scaling(
     """
     Calculate KV cache memory for standard MHA at various context lengths.
 
-    This produces the numbers from the README:
-      - Standard MHA: ~128 MB per 1k tokens (for a 1B-scale model)
-      - MLA target:   ~8 MB per 1k tokens (93% reduction)
+    This describes cache tensors only. Weights, activations, temporary attention
+    scores, and allocator overhead require additional memory.
 
     Returns a list of dicts with {seq_len, cache_mb, cache_gb} for each length.
     """

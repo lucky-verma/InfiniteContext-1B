@@ -1,0 +1,12 @@
+{
+  "runtime_revision": "6703d7894c70e8b076ce4608157d056e42e6889c",
+  "redactions": "The local stock-binary path is replaced by <stock-llama-server>; model output and failure are unchanged.",
+  "original_sha256": {
+    "events.jsonl": "8bbb967f5a189f1318b3115db9aa394da21776a6ce6000a60f9ffddd2e1c2401",
+    "server.log": "9f733d99e1b1f62b611e528e7618597125925f8afa917d0a5277af2d38f0258d",
+    "summary.json": "20fee83d54dcd80c8b6fdf4b41c02e9b53b706b9c2a7b9fb1dc32821a6eae014",
+    "request.json": "8fa81ce13ecf7eb089f948ad3f164042d97076ebd5e4c0e3417175f7cea679d1",
+    "metrics.txt": "cce918650ca66a3605548adc3f4929a12b3871f6f0452c83e5024b455ca2ce39",
+    "metadata.json": "d52890c5312a8755bfb42581902a38304b7804de780b9f2b1fcb9b6c3038fcf5"
+  }
+}

@@ -1,0 +1,499 @@
+{"elapsed_s": 0.21443553699646145, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 1, "tokens_evaluated": 14}}
+{"elapsed_s": 0.26246488199103624, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 2, "tokens_evaluated": 14}}
+{"elapsed_s": 0.3093416589545086, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 3, "tokens_evaluated": 14}}
+{"elapsed_s": 0.356021566898562, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 4, "tokens_evaluated": 14}}
+{"elapsed_s": 0.403537634992972, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 5, "tokens_evaluated": 14}}
+{"elapsed_s": 0.4503184899222106, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 6, "tokens_evaluated": 14}}
+{"elapsed_s": 0.4967135319020599, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 7, "tokens_evaluated": 14}}
+{"elapsed_s": 0.543411249993369, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 8, "tokens_evaluated": 14}}
+{"elapsed_s": 0.5901548439869657, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 9, "tokens_evaluated": 14}}
+{"elapsed_s": 0.6373003079788759, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 10, "tokens_evaluated": 14}}
+{"elapsed_s": 0.6839269140036777, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 11, "tokens_evaluated": 14}}
+{"elapsed_s": 0.7303830930031836, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 12, "tokens_evaluated": 14}}
+{"elapsed_s": 0.7772448799805716, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 13, "tokens_evaluated": 14}}
+{"elapsed_s": 0.8247358889784664, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 14, "tokens_evaluated": 14}}
+{"elapsed_s": 0.8721803049556911, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 15, "tokens_evaluated": 14}}
+{"elapsed_s": 0.9199734809808433, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 16, "tokens_evaluated": 14}}
+{"elapsed_s": 0.9677757119061425, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 17, "tokens_evaluated": 14}}
+{"elapsed_s": 1.0151569379959255, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 18, "tokens_evaluated": 14}}
+{"elapsed_s": 1.0620235659880564, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 19, "tokens_evaluated": 14}}
+{"elapsed_s": 1.108782872906886, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 20, "tokens_evaluated": 14}}
+{"elapsed_s": 1.1556917189154774, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 21, "tokens_evaluated": 14}}
+{"elapsed_s": 1.2036966329906136, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 22, "tokens_evaluated": 14}}
+{"elapsed_s": 1.2505951039493084, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 23, "tokens_evaluated": 14}}
+{"elapsed_s": 1.29758423299063, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 24, "tokens_evaluated": 14}}
+{"elapsed_s": 1.3443903239676729, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 25, "tokens_evaluated": 14}}
+{"elapsed_s": 1.3909896679688245, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 26, "tokens_evaluated": 14}}
+{"elapsed_s": 1.4374851899920031, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 27, "tokens_evaluated": 14}}
+{"elapsed_s": 1.4846822529798374, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 28, "tokens_evaluated": 14}}
+{"elapsed_s": 1.531912387930788, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 29, "tokens_evaluated": 14}}
+{"elapsed_s": 1.5794879460008815, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 30, "tokens_evaluated": 14}}
+{"elapsed_s": 1.6270730239339173, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 31, "tokens_evaluated": 14}}
+{"elapsed_s": 1.6743161689955741, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 32, "tokens_evaluated": 14}}
+{"elapsed_s": 1.7219783129403368, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 33, "tokens_evaluated": 14}}
+{"elapsed_s": 1.769472584943287, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 34, "tokens_evaluated": 14}}
+{"elapsed_s": 1.8165053919656202, "event": {"index": 0, "content": "5", "tokens": [20], "stop": false, "id_slot": -1, "tokens_predicted": 35, "tokens_evaluated": 14}}
+{"elapsed_s": 1.863185546011664, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 36, "tokens_evaluated": 14}}
+{"elapsed_s": 1.9097040829947218, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 37, "tokens_evaluated": 14}}
+{"elapsed_s": 1.9564032729249448, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 38, "tokens_evaluated": 14}}
+{"elapsed_s": 2.002914671902545, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 39, "tokens_evaluated": 14}}
+{"elapsed_s": 2.0498962509445846, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 40, "tokens_evaluated": 14}}
+{"elapsed_s": 2.0966214089421555, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 41, "tokens_evaluated": 14}}
+{"elapsed_s": 2.1432539449306205, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 42, "tokens_evaluated": 14}}
+{"elapsed_s": 2.1899588389787823, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 43, "tokens_evaluated": 14}}
+{"elapsed_s": 2.23664001992438, "event": {"index": 0, "content": "6", "tokens": [21], "stop": false, "id_slot": -1, "tokens_predicted": 44, "tokens_evaluated": 14}}
+{"elapsed_s": 2.2844276119722053, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 45, "tokens_evaluated": 14}}
+{"elapsed_s": 2.3325072209117934, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 46, "tokens_evaluated": 14}}
+{"elapsed_s": 2.380362065974623, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 47, "tokens_evaluated": 14}}
+{"elapsed_s": 2.42832499591168, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 48, "tokens_evaluated": 14}}
+{"elapsed_s": 2.4752513949060813, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 49, "tokens_evaluated": 14}}
+{"elapsed_s": 2.5221792339580134, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 50, "tokens_evaluated": 14}}
+{"elapsed_s": 2.568709782906808, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 51, "tokens_evaluated": 14}}
+{"elapsed_s": 2.615579520002939, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 52, "tokens_evaluated": 14}}
+{"elapsed_s": 2.6623792719328776, "event": {"index": 0, "content": "7", "tokens": [22], "stop": false, "id_slot": -1, "tokens_predicted": 53, "tokens_evaluated": 14}}
+{"elapsed_s": 2.708857857971452, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 54, "tokens_evaluated": 14}}
+{"elapsed_s": 2.75550237193238, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 55, "tokens_evaluated": 14}}
+{"elapsed_s": 2.8019782779738307, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 56, "tokens_evaluated": 14}}
+{"elapsed_s": 2.8485171529464424, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 57, "tokens_evaluated": 14}}
+{"elapsed_s": 2.8954028909793124, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 58, "tokens_evaluated": 14}}
+{"elapsed_s": 2.9443429419770837, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 59, "tokens_evaluated": 14}}
+{"elapsed_s": 2.9927839449374005, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 60, "tokens_evaluated": 14}}
+{"elapsed_s": 3.0417052069678903, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 61, "tokens_evaluated": 14}}
+{"elapsed_s": 3.09021633293014, "event": {"index": 0, "content": "8", "tokens": [23], "stop": false, "id_slot": -1, "tokens_predicted": 62, "tokens_evaluated": 14}}
+{"elapsed_s": 3.138898925972171, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 63, "tokens_evaluated": 14}}
+{"elapsed_s": 3.188194095971994, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 64, "tokens_evaluated": 14}}
+{"elapsed_s": 3.2369777569547296, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 65, "tokens_evaluated": 14}}
+{"elapsed_s": 3.284673669957556, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 66, "tokens_evaluated": 14}}
+{"elapsed_s": 3.3320520980050787, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 67, "tokens_evaluated": 14}}
+{"elapsed_s": 3.3797302959719673, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 68, "tokens_evaluated": 14}}
+{"elapsed_s": 3.4273403469705954, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 69, "tokens_evaluated": 14}}
+{"elapsed_s": 3.474972483003512, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 70, "tokens_evaluated": 14}}
+{"elapsed_s": 3.522144126938656, "event": {"index": 0, "content": "9", "tokens": [24], "stop": false, "id_slot": -1, "tokens_predicted": 71, "tokens_evaluated": 14}}
+{"elapsed_s": 3.5693946379469708, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 72, "tokens_evaluated": 14}}
+{"elapsed_s": 3.6167104839114472, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 73, "tokens_evaluated": 14}}
+{"elapsed_s": 3.6633994339499623, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 74, "tokens_evaluated": 14}}
+{"elapsed_s": 3.7103749259840697, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 75, "tokens_evaluated": 14}}
+{"elapsed_s": 3.757272897986695, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 76, "tokens_evaluated": 14}}
+{"elapsed_s": 3.80430733889807, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 77, "tokens_evaluated": 14}}
+{"elapsed_s": 3.8522038789233193, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 78, "tokens_evaluated": 14}}
+{"elapsed_s": 3.8997197109274566, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 79, "tokens_evaluated": 14}}
+{"elapsed_s": 3.9474049599375576, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 80, "tokens_evaluated": 14}}
+{"elapsed_s": 3.995047001983039, "event": {"index": 0, "content": "0", "tokens": [15], "stop": false, "id_slot": -1, "tokens_predicted": 81, "tokens_evaluated": 14}}
+{"elapsed_s": 4.041905664955266, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 82, "tokens_evaluated": 14}}
+{"elapsed_s": 4.088641840964556, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 83, "tokens_evaluated": 14}}
+{"elapsed_s": 4.135324450908229, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 84, "tokens_evaluated": 14}}
+{"elapsed_s": 4.182141750003211, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 85, "tokens_evaluated": 14}}
+{"elapsed_s": 4.228828068007715, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 86, "tokens_evaluated": 14}}
+{"elapsed_s": 4.275652983924374, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 87, "tokens_evaluated": 14}}
+{"elapsed_s": 4.322503901901655, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 88, "tokens_evaluated": 14}}
+{"elapsed_s": 4.369384983903728, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 89, "tokens_evaluated": 14}}
+{"elapsed_s": 4.416041350923479, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 90, "tokens_evaluated": 14}}
+{"elapsed_s": 4.462816520943306, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 91, "tokens_evaluated": 14}}
+{"elapsed_s": 4.509513280936517, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 92, "tokens_evaluated": 14}}
+{"elapsed_s": 4.557314971927553, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 93, "tokens_evaluated": 14}}
+{"elapsed_s": 4.605349921970628, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 94, "tokens_evaluated": 14}}
+{"elapsed_s": 4.65344694594387, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 95, "tokens_evaluated": 14}}
+{"elapsed_s": 4.700974476989359, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 96, "tokens_evaluated": 14}}
+{"elapsed_s": 4.748368744971231, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 97, "tokens_evaluated": 14}}
+{"elapsed_s": 4.79527290398255, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 98, "tokens_evaluated": 14}}
+{"elapsed_s": 4.842385230003856, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 99, "tokens_evaluated": 14}}
+{"elapsed_s": 4.889353933976963, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 100, "tokens_evaluated": 14}}
+{"elapsed_s": 4.936285043950193, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 101, "tokens_evaluated": 14}}
+{"elapsed_s": 4.982904131989926, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 102, "tokens_evaluated": 14}}
+{"elapsed_s": 5.029487696941942, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 103, "tokens_evaluated": 14}}
+{"elapsed_s": 5.076485792989843, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 104, "tokens_evaluated": 14}}
+{"elapsed_s": 5.123623571009375, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 105, "tokens_evaluated": 14}}
+{"elapsed_s": 5.170494672958739, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 106, "tokens_evaluated": 14}}
+{"elapsed_s": 5.217395626008511, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 107, "tokens_evaluated": 14}}
+{"elapsed_s": 5.264618046930991, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 108, "tokens_evaluated": 14}}
+{"elapsed_s": 5.312409283942543, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 109, "tokens_evaluated": 14}}
+{"elapsed_s": 5.3600225179689005, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 110, "tokens_evaluated": 14}}
+{"elapsed_s": 5.408337075961754, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 111, "tokens_evaluated": 14}}
+{"elapsed_s": 5.456231118994765, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 112, "tokens_evaluated": 14}}
+{"elapsed_s": 5.50358309596777, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 113, "tokens_evaluated": 14}}
+{"elapsed_s": 5.550456416909583, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 114, "tokens_evaluated": 14}}
+{"elapsed_s": 5.597077013924718, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 115, "tokens_evaluated": 14}}
+{"elapsed_s": 5.643847564002499, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 116, "tokens_evaluated": 14}}
+{"elapsed_s": 5.690960170933977, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 117, "tokens_evaluated": 14}}
+{"elapsed_s": 5.7379092269111425, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 118, "tokens_evaluated": 14}}
+{"elapsed_s": 5.784748582984321, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 119, "tokens_evaluated": 14}}
+{"elapsed_s": 5.832148505956866, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 120, "tokens_evaluated": 14}}
+{"elapsed_s": 5.879236643901095, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 121, "tokens_evaluated": 14}}
+{"elapsed_s": 5.926238844986074, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 122, "tokens_evaluated": 14}}
+{"elapsed_s": 5.973668020917103, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 123, "tokens_evaluated": 14}}
+{"elapsed_s": 6.021296438993886, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 124, "tokens_evaluated": 14}}
+{"elapsed_s": 6.069324375945143, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 125, "tokens_evaluated": 14}}
+{"elapsed_s": 6.116928891977295, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 126, "tokens_evaluated": 14}}
+{"elapsed_s": 6.164830648922361, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 127, "tokens_evaluated": 14}}
+{"elapsed_s": 6.212679694988765, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 128, "tokens_evaluated": 14}}
+{"elapsed_s": 6.260145662003197, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 129, "tokens_evaluated": 14}}
+{"elapsed_s": 6.30716807290446, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 130, "tokens_evaluated": 14}}
+{"elapsed_s": 6.354197285952978, "event": {"index": 0, "content": "5", "tokens": [20], "stop": false, "id_slot": -1, "tokens_predicted": 131, "tokens_evaluated": 14}}
+{"elapsed_s": 6.401176932966337, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 132, "tokens_evaluated": 14}}
+{"elapsed_s": 6.4480033739237115, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 133, "tokens_evaluated": 14}}
+{"elapsed_s": 6.495161286904477, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 134, "tokens_evaluated": 14}}
+{"elapsed_s": 6.542373452917673, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 135, "tokens_evaluated": 14}}
+{"elapsed_s": 6.589374223956838, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 136, "tokens_evaluated": 14}}
+{"elapsed_s": 6.636187179014087, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 137, "tokens_evaluated": 14}}
+{"elapsed_s": 6.682797341956757, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 138, "tokens_evaluated": 14}}
+{"elapsed_s": 6.729653546004556, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 139, "tokens_evaluated": 14}}
+{"elapsed_s": 6.777310046949424, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 140, "tokens_evaluated": 14}}
+{"elapsed_s": 6.824906102963723, "event": {"index": 0, "content": "6", "tokens": [21], "stop": false, "id_slot": -1, "tokens_predicted": 141, "tokens_evaluated": 14}}
+{"elapsed_s": 6.872715616947971, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 142, "tokens_evaluated": 14}}
+{"elapsed_s": 6.920391749939881, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 143, "tokens_evaluated": 14}}
+{"elapsed_s": 6.968300962005742, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 144, "tokens_evaluated": 14}}
+{"elapsed_s": 7.015261496999301, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 145, "tokens_evaluated": 14}}
+{"elapsed_s": 7.062272668932565, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 146, "tokens_evaluated": 14}}
+{"elapsed_s": 7.109640182927251, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 147, "tokens_evaluated": 14}}
+{"elapsed_s": 7.15669861191418, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 148, "tokens_evaluated": 14}}
+{"elapsed_s": 7.203622816945426, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 149, "tokens_evaluated": 14}}
+{"elapsed_s": 7.250631670001894, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 150, "tokens_evaluated": 14}}
+{"elapsed_s": 7.297513230936602, "event": {"index": 0, "content": "7", "tokens": [22], "stop": false, "id_slot": -1, "tokens_predicted": 151, "tokens_evaluated": 14}}
+{"elapsed_s": 7.344392105937004, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 152, "tokens_evaluated": 14}}
+{"elapsed_s": 7.392141855903901, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 153, "tokens_evaluated": 14}}
+{"elapsed_s": 7.439932540990412, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 154, "tokens_evaluated": 14}}
+{"elapsed_s": 7.486999308923259, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 155, "tokens_evaluated": 14}}
+{"elapsed_s": 7.534671681001782, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 156, "tokens_evaluated": 14}}
+{"elapsed_s": 7.582036784966476, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 157, "tokens_evaluated": 14}}
+{"elapsed_s": 7.6295723639195785, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 158, "tokens_evaluated": 14}}
+{"elapsed_s": 7.677139998995699, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 159, "tokens_evaluated": 14}}
+{"elapsed_s": 7.7251796789933, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 160, "tokens_evaluated": 14}}
+{"elapsed_s": 7.772059114999138, "event": {"index": 0, "content": "8", "tokens": [23], "stop": false, "id_slot": -1, "tokens_predicted": 161, "tokens_evaluated": 14}}
+{"elapsed_s": 7.819149203947745, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 162, "tokens_evaluated": 14}}
+{"elapsed_s": 7.866104843909852, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 163, "tokens_evaluated": 14}}
+{"elapsed_s": 7.912987109972164, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 164, "tokens_evaluated": 14}}
+{"elapsed_s": 7.9600204159505665, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 165, "tokens_evaluated": 14}}
+{"elapsed_s": 8.007670371909626, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 166, "tokens_evaluated": 14}}
+{"elapsed_s": 8.055492045008577, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 167, "tokens_evaluated": 14}}
+{"elapsed_s": 8.103031645994633, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 168, "tokens_evaluated": 14}}
+{"elapsed_s": 8.151741345995106, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 169, "tokens_evaluated": 14}}
+{"elapsed_s": 8.20083722495474, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 170, "tokens_evaluated": 14}}
+{"elapsed_s": 8.249677823972888, "event": {"index": 0, "content": "9", "tokens": [24], "stop": false, "id_slot": -1, "tokens_predicted": 171, "tokens_evaluated": 14}}
+{"elapsed_s": 8.298257602960803, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 172, "tokens_evaluated": 14}}
+{"elapsed_s": 8.346771875978447, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 173, "tokens_evaluated": 14}}
+{"elapsed_s": 8.395287313964218, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 174, "tokens_evaluated": 14}}
+{"elapsed_s": 8.444688346935436, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 175, "tokens_evaluated": 14}}
+{"elapsed_s": 8.49344915698748, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 176, "tokens_evaluated": 14}}
+{"elapsed_s": 8.541719547938555, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 177, "tokens_evaluated": 14}}
+{"elapsed_s": 8.589732858003117, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 178, "tokens_evaluated": 14}}
+{"elapsed_s": 8.637039278983139, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 179, "tokens_evaluated": 14}}
+{"elapsed_s": 8.683906215941533, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 180, "tokens_evaluated": 14}}
+{"elapsed_s": 8.73127519490663, "event": {"index": 0, "content": "0", "tokens": [15], "stop": false, "id_slot": -1, "tokens_predicted": 181, "tokens_evaluated": 14}}
+{"elapsed_s": 8.778367006918415, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 182, "tokens_evaluated": 14}}
+{"elapsed_s": 8.825819856952876, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 183, "tokens_evaluated": 14}}
+{"elapsed_s": 8.872817829949781, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 184, "tokens_evaluated": 14}}
+{"elapsed_s": 8.92009336897172, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 185, "tokens_evaluated": 14}}
+{"elapsed_s": 8.967282572994009, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 186, "tokens_evaluated": 14}}
+{"elapsed_s": 9.014935030951165, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 187, "tokens_evaluated": 14}}
+{"elapsed_s": 9.06284266198054, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 188, "tokens_evaluated": 14}}
+{"elapsed_s": 9.111276595969684, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 189, "tokens_evaluated": 14}}
+{"elapsed_s": 9.159318171907216, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 190, "tokens_evaluated": 14}}
+{"elapsed_s": 9.207815734902397, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 191, "tokens_evaluated": 14}}
+{"elapsed_s": 9.255088047939353, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 192, "tokens_evaluated": 14}}
+{"elapsed_s": 9.301939064986072, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 193, "tokens_evaluated": 14}}
+{"elapsed_s": 9.34916867990978, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 194, "tokens_evaluated": 14}}
+{"elapsed_s": 9.396536128013395, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 195, "tokens_evaluated": 14}}
+{"elapsed_s": 9.44380835792981, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 196, "tokens_evaluated": 14}}
+{"elapsed_s": 9.490899345953949, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 197, "tokens_evaluated": 14}}
+{"elapsed_s": 9.537935612956062, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 198, "tokens_evaluated": 14}}
+{"elapsed_s": 9.585078426986001, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 199, "tokens_evaluated": 14}}
+{"elapsed_s": 9.632148681906983, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 200, "tokens_evaluated": 14}}
+{"elapsed_s": 9.679508267901838, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 201, "tokens_evaluated": 14}}
+{"elapsed_s": 9.726771601941437, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 202, "tokens_evaluated": 14}}
+{"elapsed_s": 9.774619463947602, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 203, "tokens_evaluated": 14}}
+{"elapsed_s": 9.822612930904143, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 204, "tokens_evaluated": 14}}
+{"elapsed_s": 9.870390386902727, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 205, "tokens_evaluated": 14}}
+{"elapsed_s": 9.918303468963131, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 206, "tokens_evaluated": 14}}
+{"elapsed_s": 9.966268287971616, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 207, "tokens_evaluated": 14}}
+{"elapsed_s": 10.013256462989375, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 208, "tokens_evaluated": 14}}
+{"elapsed_s": 10.060432662954554, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 209, "tokens_evaluated": 14}}
+{"elapsed_s": 10.107361344969831, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 210, "tokens_evaluated": 14}}
+{"elapsed_s": 10.15471442998387, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 211, "tokens_evaluated": 14}}
+{"elapsed_s": 10.20215227699373, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 212, "tokens_evaluated": 14}}
+{"elapsed_s": 10.251085077994503, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 213, "tokens_evaluated": 14}}
+{"elapsed_s": 10.298811086919159, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 214, "tokens_evaluated": 14}}
+{"elapsed_s": 10.346408934914507, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 215, "tokens_evaluated": 14}}
+{"elapsed_s": 10.393655142979696, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 216, "tokens_evaluated": 14}}
+{"elapsed_s": 10.440853465930559, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 217, "tokens_evaluated": 14}}
+{"elapsed_s": 10.489460601937026, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 218, "tokens_evaluated": 14}}
+{"elapsed_s": 10.53760738892015, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 219, "tokens_evaluated": 14}}
+{"elapsed_s": 10.58526671398431, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 220, "tokens_evaluated": 14}}
+{"elapsed_s": 10.634309637011029, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 221, "tokens_evaluated": 14}}
+{"elapsed_s": 10.6822056369856, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 222, "tokens_evaluated": 14}}
+{"elapsed_s": 10.729556495905854, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 223, "tokens_evaluated": 14}}
+{"elapsed_s": 10.776773970923387, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 224, "tokens_evaluated": 14}}
+{"elapsed_s": 10.824342070962302, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 225, "tokens_evaluated": 14}}
+{"elapsed_s": 10.871100572985597, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 226, "tokens_evaluated": 14}}
+{"elapsed_s": 10.91807744000107, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 227, "tokens_evaluated": 14}}
+{"elapsed_s": 10.965375747997314, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 228, "tokens_evaluated": 14}}
+{"elapsed_s": 11.01283404091373, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 229, "tokens_evaluated": 14}}
+{"elapsed_s": 11.060535880969837, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 230, "tokens_evaluated": 14}}
+{"elapsed_s": 11.107936027925462, "event": {"index": 0, "content": "5", "tokens": [20], "stop": false, "id_slot": -1, "tokens_predicted": 231, "tokens_evaluated": 14}}
+{"elapsed_s": 11.15541507198941, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 232, "tokens_evaluated": 14}}
+{"elapsed_s": 11.203383523970842, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 233, "tokens_evaluated": 14}}
+{"elapsed_s": 11.253311389009468, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 234, "tokens_evaluated": 14}}
+{"elapsed_s": 11.301760453963652, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 235, "tokens_evaluated": 14}}
+{"elapsed_s": 11.349822755903006, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 236, "tokens_evaluated": 14}}
+{"elapsed_s": 11.39802929700818, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 237, "tokens_evaluated": 14}}
+{"elapsed_s": 11.446234827977605, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 238, "tokens_evaluated": 14}}
+{"elapsed_s": 11.493750331923366, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 239, "tokens_evaluated": 14}}
+{"elapsed_s": 11.541446961928159, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 240, "tokens_evaluated": 14}}
+{"elapsed_s": 11.58943032391835, "event": {"index": 0, "content": "6", "tokens": [21], "stop": false, "id_slot": -1, "tokens_predicted": 241, "tokens_evaluated": 14}}
+{"elapsed_s": 11.636797079001553, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 242, "tokens_evaluated": 14}}
+{"elapsed_s": 11.685689772944897, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 243, "tokens_evaluated": 14}}
+{"elapsed_s": 11.735124876955524, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 244, "tokens_evaluated": 14}}
+{"elapsed_s": 11.78281259292271, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 245, "tokens_evaluated": 14}}
+{"elapsed_s": 11.830757668009028, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 246, "tokens_evaluated": 14}}
+{"elapsed_s": 11.878855207934976, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 247, "tokens_evaluated": 14}}
+{"elapsed_s": 11.926702733966522, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 248, "tokens_evaluated": 14}}
+{"elapsed_s": 11.975446694996208, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 249, "tokens_evaluated": 14}}
+{"elapsed_s": 12.024300287943333, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 250, "tokens_evaluated": 14}}
+{"elapsed_s": 12.073308688937686, "event": {"index": 0, "content": "7", "tokens": [22], "stop": false, "id_slot": -1, "tokens_predicted": 251, "tokens_evaluated": 14}}
+{"elapsed_s": 12.1239881250076, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 252, "tokens_evaluated": 14}}
+{"elapsed_s": 12.173606680007651, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 253, "tokens_evaluated": 14}}
+{"elapsed_s": 12.222181100980379, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 254, "tokens_evaluated": 14}}
+{"elapsed_s": 12.270043351920322, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 255, "tokens_evaluated": 14}}
+{"elapsed_s": 12.3179359450005, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 256, "tokens_evaluated": 14}}
+{"elapsed_s": 12.365782557986677, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 257, "tokens_evaluated": 14}}
+{"elapsed_s": 12.413984789978713, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 258, "tokens_evaluated": 14}}
+{"elapsed_s": 12.46190452692099, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 259, "tokens_evaluated": 14}}
+{"elapsed_s": 12.509675313951448, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 260, "tokens_evaluated": 14}}
+{"elapsed_s": 12.558244698913768, "event": {"index": 0, "content": "8", "tokens": [23], "stop": false, "id_slot": -1, "tokens_predicted": 261, "tokens_evaluated": 14}}
+{"elapsed_s": 12.606634936993942, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 262, "tokens_evaluated": 14}}
+{"elapsed_s": 12.655334651935846, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 263, "tokens_evaluated": 14}}
+{"elapsed_s": 12.703632709919475, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 264, "tokens_evaluated": 14}}
+{"elapsed_s": 12.752979490906, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 265, "tokens_evaluated": 14}}
+{"elapsed_s": 12.802057800930925, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 266, "tokens_evaluated": 14}}
+{"elapsed_s": 12.850764954928309, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 267, "tokens_evaluated": 14}}
+{"elapsed_s": 12.899294618982822, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 268, "tokens_evaluated": 14}}
+{"elapsed_s": 12.947583241970278, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 269, "tokens_evaluated": 14}}
+{"elapsed_s": 12.995766247971915, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 270, "tokens_evaluated": 14}}
+{"elapsed_s": 13.043345505953766, "event": {"index": 0, "content": "9", "tokens": [24], "stop": false, "id_slot": -1, "tokens_predicted": 271, "tokens_evaluated": 14}}
+{"elapsed_s": 13.092054836917669, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 272, "tokens_evaluated": 14}}
+{"elapsed_s": 13.140930919907987, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 273, "tokens_evaluated": 14}}
+{"elapsed_s": 13.189181415946223, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 274, "tokens_evaluated": 14}}
+{"elapsed_s": 13.237634618999436, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 275, "tokens_evaluated": 14}}
+{"elapsed_s": 13.286610506940633, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 276, "tokens_evaluated": 14}}
+{"elapsed_s": 13.335497454972938, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 277, "tokens_evaluated": 14}}
+{"elapsed_s": 13.384370357962325, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 278, "tokens_evaluated": 14}}
+{"elapsed_s": 13.433831481961533, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 279, "tokens_evaluated": 14}}
+{"elapsed_s": 13.483093949966133, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 280, "tokens_evaluated": 14}}
+{"elapsed_s": 13.533577486989088, "event": {"index": 0, "content": "0", "tokens": [15], "stop": false, "id_slot": -1, "tokens_predicted": 281, "tokens_evaluated": 14}}
+{"elapsed_s": 13.583455847925507, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 282, "tokens_evaluated": 14}}
+{"elapsed_s": 13.632692314917222, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 283, "tokens_evaluated": 14}}
+{"elapsed_s": 13.681420722976327, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 284, "tokens_evaluated": 14}}
+{"elapsed_s": 13.729327404987998, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 285, "tokens_evaluated": 14}}
+{"elapsed_s": 13.777180828968994, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 286, "tokens_evaluated": 14}}
+{"elapsed_s": 13.82511254993733, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 287, "tokens_evaluated": 14}}
+{"elapsed_s": 13.873777398956008, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 288, "tokens_evaluated": 14}}
+{"elapsed_s": 13.921715294010937, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 289, "tokens_evaluated": 14}}
+{"elapsed_s": 13.969712301972322, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 290, "tokens_evaluated": 14}}
+{"elapsed_s": 14.017492424929515, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 291, "tokens_evaluated": 14}}
+{"elapsed_s": 14.065474085975438, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 292, "tokens_evaluated": 14}}
+{"elapsed_s": 14.113054042914882, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 293, "tokens_evaluated": 14}}
+{"elapsed_s": 14.160760934930295, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 294, "tokens_evaluated": 14}}
+{"elapsed_s": 14.209154699929059, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 295, "tokens_evaluated": 14}}
+{"elapsed_s": 14.258316495921463, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 296, "tokens_evaluated": 14}}
+{"elapsed_s": 14.306915911962278, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 297, "tokens_evaluated": 14}}
+{"elapsed_s": 14.355629275902174, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 298, "tokens_evaluated": 14}}
+{"elapsed_s": 14.40430736693088, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 299, "tokens_evaluated": 14}}
+{"elapsed_s": 14.452170398901217, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 300, "tokens_evaluated": 14}}
+{"elapsed_s": 14.500939960009418, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 301, "tokens_evaluated": 14}}
+{"elapsed_s": 14.54943979694508, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 302, "tokens_evaluated": 14}}
+{"elapsed_s": 14.597300471970811, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 303, "tokens_evaluated": 14}}
+{"elapsed_s": 14.645371972001158, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 304, "tokens_evaluated": 14}}
+{"elapsed_s": 14.69330704701133, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 305, "tokens_evaluated": 14}}
+{"elapsed_s": 14.741051830002107, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 306, "tokens_evaluated": 14}}
+{"elapsed_s": 14.789058103924617, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 307, "tokens_evaluated": 14}}
+{"elapsed_s": 14.836870600935072, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 308, "tokens_evaluated": 14}}
+{"elapsed_s": 14.88464992493391, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 309, "tokens_evaluated": 14}}
+{"elapsed_s": 14.932422988931648, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 310, "tokens_evaluated": 14}}
+{"elapsed_s": 14.980968303978443, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 311, "tokens_evaluated": 14}}
+{"elapsed_s": 15.02934894093778, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 312, "tokens_evaluated": 14}}
+{"elapsed_s": 15.07766443293076, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 313, "tokens_evaluated": 14}}
+{"elapsed_s": 15.125772285973653, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 314, "tokens_evaluated": 14}}
+{"elapsed_s": 15.174156092922203, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 315, "tokens_evaluated": 14}}
+{"elapsed_s": 15.222423554980196, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 316, "tokens_evaluated": 14}}
+{"elapsed_s": 15.2701425999403, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 317, "tokens_evaluated": 14}}
+{"elapsed_s": 15.318022463005036, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 318, "tokens_evaluated": 14}}
+{"elapsed_s": 15.365647775004618, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 319, "tokens_evaluated": 14}}
+{"elapsed_s": 15.413531789905392, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 320, "tokens_evaluated": 14}}
+{"elapsed_s": 15.461238724994473, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 321, "tokens_evaluated": 14}}
+{"elapsed_s": 15.508776427945122, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 322, "tokens_evaluated": 14}}
+{"elapsed_s": 15.55660857190378, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 323, "tokens_evaluated": 14}}
+{"elapsed_s": 15.604185348958708, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 324, "tokens_evaluated": 14}}
+{"elapsed_s": 15.651872520917095, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 325, "tokens_evaluated": 14}}
+{"elapsed_s": 15.6995844040066, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 326, "tokens_evaluated": 14}}
+{"elapsed_s": 15.748757792985998, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 327, "tokens_evaluated": 14}}
+{"elapsed_s": 15.797112677944824, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 328, "tokens_evaluated": 14}}
+{"elapsed_s": 15.845456626964733, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 329, "tokens_evaluated": 14}}
+{"elapsed_s": 15.894072310999036, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 330, "tokens_evaluated": 14}}
+{"elapsed_s": 15.942624117946252, "event": {"index": 0, "content": "5", "tokens": [20], "stop": false, "id_slot": -1, "tokens_predicted": 331, "tokens_evaluated": 14}}
+{"elapsed_s": 15.990525597939268, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 332, "tokens_evaluated": 14}}
+{"elapsed_s": 16.038429448963143, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 333, "tokens_evaluated": 14}}
+{"elapsed_s": 16.086312865954824, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 334, "tokens_evaluated": 14}}
+{"elapsed_s": 16.134150296915323, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 335, "tokens_evaluated": 14}}
+{"elapsed_s": 16.1820156769827, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 336, "tokens_evaluated": 14}}
+{"elapsed_s": 16.229893846902996, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 337, "tokens_evaluated": 14}}
+{"elapsed_s": 16.277824044926092, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 338, "tokens_evaluated": 14}}
+{"elapsed_s": 16.32583230989985, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 339, "tokens_evaluated": 14}}
+{"elapsed_s": 16.373658788972534, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 340, "tokens_evaluated": 14}}
+{"elapsed_s": 16.42143111396581, "event": {"index": 0, "content": "6", "tokens": [21], "stop": false, "id_slot": -1, "tokens_predicted": 341, "tokens_evaluated": 14}}
+{"elapsed_s": 16.469717581989244, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 342, "tokens_evaluated": 14}}
+{"elapsed_s": 16.51862857490778, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 343, "tokens_evaluated": 14}}
+{"elapsed_s": 16.568880565930158, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 344, "tokens_evaluated": 14}}
+{"elapsed_s": 16.61978565796744, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 345, "tokens_evaluated": 14}}
+{"elapsed_s": 16.669260993949138, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 346, "tokens_evaluated": 14}}
+{"elapsed_s": 16.718241074937396, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 347, "tokens_evaluated": 14}}
+{"elapsed_s": 16.76766356790904, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 348, "tokens_evaluated": 14}}
+{"elapsed_s": 16.817196246935055, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 349, "tokens_evaluated": 14}}
+{"elapsed_s": 16.86591646494344, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 350, "tokens_evaluated": 14}}
+{"elapsed_s": 16.914880717988126, "event": {"index": 0, "content": "7", "tokens": [22], "stop": false, "id_slot": -1, "tokens_predicted": 351, "tokens_evaluated": 14}}
+{"elapsed_s": 16.96354221191723, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 352, "tokens_evaluated": 14}}
+{"elapsed_s": 17.01219662593212, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 353, "tokens_evaluated": 14}}
+{"elapsed_s": 17.06041345396079, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 354, "tokens_evaluated": 14}}
+{"elapsed_s": 17.107934647006914, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 355, "tokens_evaluated": 14}}
+{"elapsed_s": 17.156206515966915, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 356, "tokens_evaluated": 14}}
+{"elapsed_s": 17.20535134000238, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 357, "tokens_evaluated": 14}}
+{"elapsed_s": 17.25474502297584, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 358, "tokens_evaluated": 14}}
+{"elapsed_s": 17.304330555954948, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 359, "tokens_evaluated": 14}}
+{"elapsed_s": 17.35356519697234, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 360, "tokens_evaluated": 14}}
+{"elapsed_s": 17.40318014100194, "event": {"index": 0, "content": "8", "tokens": [23], "stop": false, "id_slot": -1, "tokens_predicted": 361, "tokens_evaluated": 14}}
+{"elapsed_s": 17.452563378959894, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 362, "tokens_evaluated": 14}}
+{"elapsed_s": 17.501364831929095, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 363, "tokens_evaluated": 14}}
+{"elapsed_s": 17.54949811589904, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 364, "tokens_evaluated": 14}}
+{"elapsed_s": 17.597675820929, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 365, "tokens_evaluated": 14}}
+{"elapsed_s": 17.647256027907133, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 366, "tokens_evaluated": 14}}
+{"elapsed_s": 17.69647378695663, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 367, "tokens_evaluated": 14}}
+{"elapsed_s": 17.74537750997115, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 368, "tokens_evaluated": 14}}
+{"elapsed_s": 17.794244976947084, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 369, "tokens_evaluated": 14}}
+{"elapsed_s": 17.842574661946855, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 370, "tokens_evaluated": 14}}
+{"elapsed_s": 17.89114016899839, "event": {"index": 0, "content": "9", "tokens": [24], "stop": false, "id_slot": -1, "tokens_predicted": 371, "tokens_evaluated": 14}}
+{"elapsed_s": 17.94007688993588, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 372, "tokens_evaluated": 14}}
+{"elapsed_s": 17.99049091897905, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 373, "tokens_evaluated": 14}}
+{"elapsed_s": 18.041250051930547, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 374, "tokens_evaluated": 14}}
+{"elapsed_s": 18.09134909999557, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 375, "tokens_evaluated": 14}}
+{"elapsed_s": 18.14202137896791, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 376, "tokens_evaluated": 14}}
+{"elapsed_s": 18.195115995942615, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 377, "tokens_evaluated": 14}}
+{"elapsed_s": 18.242724452982657, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 378, "tokens_evaluated": 14}}
+{"elapsed_s": 18.290676278993487, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 379, "tokens_evaluated": 14}}
+{"elapsed_s": 18.33859774598386, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 380, "tokens_evaluated": 14}}
+{"elapsed_s": 18.38657805195544, "event": {"index": 0, "content": "0", "tokens": [15], "stop": false, "id_slot": -1, "tokens_predicted": 381, "tokens_evaluated": 14}}
+{"elapsed_s": 18.434613000950776, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 382, "tokens_evaluated": 14}}
+{"elapsed_s": 18.482766827917658, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 383, "tokens_evaluated": 14}}
+{"elapsed_s": 18.530656364979222, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 384, "tokens_evaluated": 14}}
+{"elapsed_s": 18.57861054490786, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 385, "tokens_evaluated": 14}}
+{"elapsed_s": 18.627612066920847, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 386, "tokens_evaluated": 14}}
+{"elapsed_s": 18.676057350006886, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 387, "tokens_evaluated": 14}}
+{"elapsed_s": 18.724699895014055, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 388, "tokens_evaluated": 14}}
+{"elapsed_s": 18.77455202792771, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 389, "tokens_evaluated": 14}}
+{"elapsed_s": 18.823878073948435, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 390, "tokens_evaluated": 14}}
+{"elapsed_s": 18.87498571490869, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 391, "tokens_evaluated": 14}}
+{"elapsed_s": 18.926159608992748, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 392, "tokens_evaluated": 14}}
+{"elapsed_s": 18.976444772910327, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 393, "tokens_evaluated": 14}}
+{"elapsed_s": 19.02527953090612, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 394, "tokens_evaluated": 14}}
+{"elapsed_s": 19.07341557194013, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 395, "tokens_evaluated": 14}}
+{"elapsed_s": 19.121997767011635, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 396, "tokens_evaluated": 14}}
+{"elapsed_s": 19.170399594004266, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 397, "tokens_evaluated": 14}}
+{"elapsed_s": 19.21821955300402, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 398, "tokens_evaluated": 14}}
+{"elapsed_s": 19.266318399924785, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 399, "tokens_evaluated": 14}}
+{"elapsed_s": 19.314049943932332, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 400, "tokens_evaluated": 14}}
+{"elapsed_s": 19.36235873796977, "event": {"index": 0, "content": "2", "tokens": [17], "stop": false, "id_slot": -1, "tokens_predicted": 401, "tokens_evaluated": 14}}
+{"elapsed_s": 19.410309731960297, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 402, "tokens_evaluated": 14}}
+{"elapsed_s": 19.458488566917367, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 403, "tokens_evaluated": 14}}
+{"elapsed_s": 19.506524138967507, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 404, "tokens_evaluated": 14}}
+{"elapsed_s": 19.555185613920912, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 405, "tokens_evaluated": 14}}
+{"elapsed_s": 19.606854340992868, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 406, "tokens_evaluated": 14}}
+{"elapsed_s": 19.65770681691356, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 407, "tokens_evaluated": 14}}
+{"elapsed_s": 19.706840219907463, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 408, "tokens_evaluated": 14}}
+{"elapsed_s": 19.755118592991494, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 409, "tokens_evaluated": 14}}
+{"elapsed_s": 19.80277297401335, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 410, "tokens_evaluated": 14}}
+{"elapsed_s": 19.850580255966634, "event": {"index": 0, "content": "3", "tokens": [18], "stop": false, "id_slot": -1, "tokens_predicted": 411, "tokens_evaluated": 14}}
+{"elapsed_s": 19.898448377964087, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 412, "tokens_evaluated": 14}}
+{"elapsed_s": 19.946398495929316, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 413, "tokens_evaluated": 14}}
+{"elapsed_s": 19.99419306195341, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 414, "tokens_evaluated": 14}}
+{"elapsed_s": 20.041982728987932, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 415, "tokens_evaluated": 14}}
+{"elapsed_s": 20.09029148996342, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 416, "tokens_evaluated": 14}}
+{"elapsed_s": 20.139276956906542, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 417, "tokens_evaluated": 14}}
+{"elapsed_s": 20.188437668955885, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 418, "tokens_evaluated": 14}}
+{"elapsed_s": 20.237065079971217, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 419, "tokens_evaluated": 14}}
+{"elapsed_s": 20.28822607593611, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 420, "tokens_evaluated": 14}}
+{"elapsed_s": 20.337752608931623, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 421, "tokens_evaluated": 14}}
+{"elapsed_s": 20.38662913395092, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 422, "tokens_evaluated": 14}}
+{"elapsed_s": 20.435275683994405, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 423, "tokens_evaluated": 14}}
+{"elapsed_s": 20.484182969899848, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 424, "tokens_evaluated": 14}}
+{"elapsed_s": 20.533156601013616, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 425, "tokens_evaluated": 14}}
+{"elapsed_s": 20.581418143003248, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 426, "tokens_evaluated": 14}}
+{"elapsed_s": 20.630062561947852, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 427, "tokens_evaluated": 14}}
+{"elapsed_s": 20.678026373963803, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 428, "tokens_evaluated": 14}}
+{"elapsed_s": 20.726066794944927, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 429, "tokens_evaluated": 14}}
+{"elapsed_s": 20.77375392592512, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 430, "tokens_evaluated": 14}}
+{"elapsed_s": 20.821450234972872, "event": {"index": 0, "content": "5", "tokens": [20], "stop": false, "id_slot": -1, "tokens_predicted": 431, "tokens_evaluated": 14}}
+{"elapsed_s": 20.869144108961336, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 432, "tokens_evaluated": 14}}
+{"elapsed_s": 20.916966168908402, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 433, "tokens_evaluated": 14}}
+{"elapsed_s": 20.964653000002727, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 434, "tokens_evaluated": 14}}
+{"elapsed_s": 21.012501630932093, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 435, "tokens_evaluated": 14}}
+{"elapsed_s": 21.06131734896917, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 436, "tokens_evaluated": 14}}
+{"elapsed_s": 21.10988213692326, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 437, "tokens_evaluated": 14}}
+{"elapsed_s": 21.158685061964206, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 438, "tokens_evaluated": 14}}
+{"elapsed_s": 21.207816284964792, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 439, "tokens_evaluated": 14}}
+{"elapsed_s": 21.2564521569293, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 440, "tokens_evaluated": 14}}
+{"elapsed_s": 21.304508866975084, "event": {"index": 0, "content": "6", "tokens": [21], "stop": false, "id_slot": -1, "tokens_predicted": 441, "tokens_evaluated": 14}}
+{"elapsed_s": 21.352344725979492, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 442, "tokens_evaluated": 14}}
+{"elapsed_s": 21.39993555599358, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 443, "tokens_evaluated": 14}}
+{"elapsed_s": 21.44758888799697, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 444, "tokens_evaluated": 14}}
+{"elapsed_s": 21.495578510919586, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 445, "tokens_evaluated": 14}}
+{"elapsed_s": 21.543281751917675, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 446, "tokens_evaluated": 14}}
+{"elapsed_s": 21.59101049392484, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 447, "tokens_evaluated": 14}}
+{"elapsed_s": 21.639782269950956, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 448, "tokens_evaluated": 14}}
+{"elapsed_s": 21.68764579400886, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 449, "tokens_evaluated": 14}}
+{"elapsed_s": 21.735631446936168, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 450, "tokens_evaluated": 14}}
+{"elapsed_s": 21.78511479496956, "event": {"index": 0, "content": "7", "tokens": [22], "stop": false, "id_slot": -1, "tokens_predicted": 451, "tokens_evaluated": 14}}
+{"elapsed_s": 21.834074314916506, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 452, "tokens_evaluated": 14}}
+{"elapsed_s": 21.88376915594563, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 453, "tokens_evaluated": 14}}
+{"elapsed_s": 21.932694886927493, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 454, "tokens_evaluated": 14}}
+{"elapsed_s": 21.98153134295717, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 455, "tokens_evaluated": 14}}
+{"elapsed_s": 22.029609382967465, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 456, "tokens_evaluated": 14}}
+{"elapsed_s": 22.077510149916634, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 457, "tokens_evaluated": 14}}
+{"elapsed_s": 22.125215586973354, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 458, "tokens_evaluated": 14}}
+{"elapsed_s": 22.17327819589991, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 459, "tokens_evaluated": 14}}
+{"elapsed_s": 22.221577457967214, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 460, "tokens_evaluated": 14}}
+{"elapsed_s": 22.26944033592008, "event": {"index": 0, "content": "8", "tokens": [23], "stop": false, "id_slot": -1, "tokens_predicted": 461, "tokens_evaluated": 14}}
+{"elapsed_s": 22.317385214962997, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 462, "tokens_evaluated": 14}}
+{"elapsed_s": 22.365518848993815, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 463, "tokens_evaluated": 14}}
+{"elapsed_s": 22.413424344966188, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 464, "tokens_evaluated": 14}}
+{"elapsed_s": 22.46125213301275, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 465, "tokens_evaluated": 14}}
+{"elapsed_s": 22.509595211944543, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 466, "tokens_evaluated": 14}}
+{"elapsed_s": 22.55875028797891, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 467, "tokens_evaluated": 14}}
+{"elapsed_s": 22.607387152966112, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 468, "tokens_evaluated": 14}}
+{"elapsed_s": 22.656238985946402, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 469, "tokens_evaluated": 14}}
+{"elapsed_s": 22.704989408957772, "event": {"index": 0, "content": "4", "tokens": [19], "stop": false, "id_slot": -1, "tokens_predicted": 470, "tokens_evaluated": 14}}
+{"elapsed_s": 22.75364059896674, "event": {"index": 0, "content": "9", "tokens": [24], "stop": false, "id_slot": -1, "tokens_predicted": 471, "tokens_evaluated": 14}}
+{"elapsed_s": 22.801042584935203, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 472, "tokens_evaluated": 14}}
+{"elapsed_s": 22.848615192924626, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 473, "tokens_evaluated": 14}}
+{"elapsed_s": 22.896290092961863, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 474, "tokens_evaluated": 14}}
+{"elapsed_s": 22.94426088000182, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 475, "tokens_evaluated": 14}}
+{"elapsed_s": 22.992061466909945, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 476, "tokens_evaluated": 14}}
+{"elapsed_s": 23.039838562952355, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 477, "tokens_evaluated": 14}}
+{"elapsed_s": 23.088518840959296, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 478, "tokens_evaluated": 14}}
+{"elapsed_s": 23.136764964903705, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 479, "tokens_evaluated": 14}}
+{"elapsed_s": 23.18492539098952, "event": {"index": 0, "content": "5", "tokens": [20], "stop": false, "id_slot": -1, "tokens_predicted": 480, "tokens_evaluated": 14}}
+{"elapsed_s": 23.23417589091696, "event": {"index": 0, "content": "0", "tokens": [15], "stop": false, "id_slot": -1, "tokens_predicted": 481, "tokens_evaluated": 14}}
+{"elapsed_s": 23.284228103933856, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 482, "tokens_evaluated": 14}}
+{"elapsed_s": 23.333079218980856, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 483, "tokens_evaluated": 14}}
+{"elapsed_s": 23.382103940006346, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 484, "tokens_evaluated": 14}}
+{"elapsed_s": 23.43126810400281, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 485, "tokens_evaluated": 14}}
+{"elapsed_s": 23.479569923947565, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 486, "tokens_evaluated": 14}}
+{"elapsed_s": 23.528151568956673, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 487, "tokens_evaluated": 14}}
+{"elapsed_s": 23.576628358918242, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 488, "tokens_evaluated": 14}}
+{"elapsed_s": 23.625465389923193, "event": {"index": 0, "content": "\n", "tokens": [198], "stop": false, "id_slot": -1, "tokens_predicted": 489, "tokens_evaluated": 14}}
+{"elapsed_s": 23.675531778950244, "event": {"index": 0, "content": "5", "tokens": [20], "stop": false, "id_slot": -1, "tokens_predicted": 490, "tokens_evaluated": 14}}
+{"elapsed_s": 23.724510271917097, "event": {"index": 0, "content": "1", "tokens": [16], "stop": false, "id_slot": -1, "tokens_predicted": 491, "tokens_evaluated": 14}}
+{"elapsed_s": 23.773233547923155, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 492, "tokens_evaluated": 14}}
+{"elapsed_s": 23.82121018890757, "event": {"index": 0, "content": " The", "tokens": [561], "stop": false, "id_slot": -1, "tokens_predicted": 493, "tokens_evaluated": 14}}
+{"elapsed_s": 23.870254437904805, "event": {"index": 0, "content": " weather", "tokens": [8831], "stop": false, "id_slot": -1, "tokens_predicted": 494, "tokens_evaluated": 14}}
+{"elapsed_s": 23.91859192692209, "event": {"index": 0, "content": " is", "tokens": [369], "stop": false, "id_slot": -1, "tokens_predicted": 495, "tokens_evaluated": 14}}
+{"elapsed_s": 23.966253665974364, "event": {"index": 0, "content": " very", "tokens": [1546], "stop": false, "id_slot": -1, "tokens_predicted": 496, "tokens_evaluated": 14}}
+{"elapsed_s": 24.01425877190195, "event": {"index": 0, "content": " hot", "tokens": [3882], "stop": false, "id_slot": -1, "tokens_predicted": 497, "tokens_evaluated": 14}}
+{"elapsed_s": 24.06459024490323, "event": {"index": 0, "content": ".", "tokens": [13], "stop": false, "id_slot": -1, "tokens_predicted": 498, "tokens_evaluated": 14}}
+{"elapsed_s": 24.064690297935158, "event": {"index": 0, "content": "", "tokens": [], "id_slot": 0, "stop": true, "model": ".models/Qwen3.5-0.8B-Q8_0.gguf", "tokens_predicted": 498, "tokens_evaluated": 14, "generation_settings": {"seed": 42, "temperature": 0.0, "dynatemp_range": 0.0, "dynatemp_exponent": 1.0, "top_k": 40, "top_p": 0.949999988079071, "min_p": 0.05000000074505806, "top_n_sigma": -1.0, "xtc_probability": 0.0, "xtc_threshold": 0.10000000149011612, "typical_p": 1.0, "repeat_last_n": 64, "repeat_penalty": 1.0, "presence_penalty": 0.0, "frequency_penalty": 0.0, "dry_multiplier": 0.0, "dry_base": 1.75, "dry_allowed_length": 2, "dry_penalty_last_n": 64, "dry_sequence_breakers": ["\n", ":", "\"", "*"], "mirostat": 0, "mirostat_tau": 5.0, "mirostat_eta": 0.10000000149011612, "adaptive_target": -1.0, "adaptive_decay": 0.8999999761581421, "stop": [], "max_tokens": 1536, "n_predict": 1536, "n_keep": 4, "n_discard": 0, "ignore_eos": true, "stream": true, "logit_bias": [{"bias": null, "token": 248044}, {"bias": null, "token": 248046}, {"bias": null, "token": 248063}, {"bias": null, "token": 248064}, {"bias": null, "token": 248065}], "n_probs": 0, "min_keep": 0, "grammar": "", "grammar_lazy": false, "grammar_triggers": [], "preserved_tokens": [], "chat_format": "Content-only", "reasoning_format": "deepseek", "reasoning_in_content": false, "generation_prompt": "", "samplers": ["penalties", "dry", "top_n_sigma", "top_k", "typ_p", "top_p", "min_p", "xtc", "temperature"], "speculative.types": "none", "timings_per_token": false, "post_sampling_probs": false, "backend_sampling": false, "lora": []}, "prompt": "Continue a numbered list of simple observations about the weather:\n1.", "has_new_line": true, "truncated": true, "stop_type": "limit", "stopping_word": "", "tokens_cached": 511, "timings": {"cache_n": 0, "prompt_n": 14, "prompt_ms": 213.55, "prompt_per_token_ms": 15.25357142857143, "prompt_per_second": 65.55841723249823, "predicted_n": 498, "predicted_ms": 23850.147, "predicted_per_token_ms": 47.98822334004024, "predicted_per_second": 20.838445985259547}}}
