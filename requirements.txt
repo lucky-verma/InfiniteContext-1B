@@ -1,3 +1,4 @@
-# Educational attention checks. The inference service runs in its pinned container.
+# PyTorch model/training checks; the native session client uses the stdlib.
 torch==2.8.0
+numpy==2.5.2  # PyTorch distributed object collectives use Tensor.numpy().
 einops==0.8.1

@@ -134,3 +134,8 @@ The [failure ledger](../results/compatibility-failures.json) records these
 outcomes and original artifact hashes. The final patch handles positional
 metadata, validates explicit eviction, and requires shared prompt RAM caching
 to be disabled. No upstream acceptance or algorithmic novelty is claimed.
+
+The first clean-environment CI run also exposed an undeclared NumPy dependency
+inside PyTorch's distributed object gathering. NumPy is now pinned in the base
+requirements; the checkpoint/resume/DDP regression passes with those installed
+requirements on a separate Python 3.12 environment.

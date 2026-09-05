@@ -9,7 +9,7 @@
     "docs/ARCHITECTURE.md": "019a2a772ba0471d0dc3829928ed51bd566427ecaffe65a9cf556a0bcc4db8c5",
     "docs/OPERATIONS.md": "4080c587cd9db3ce59e198a6d0a68a5882e75c29e9804e3cc2f62be5c5dd6076",
     "docs/README.md": "cc45bac5d29c25096cb98f3d614ffbe81044494bbd720f2252688504369c00bb",
-    "docs/RESULTS.md": "3a29e12a80948fb6533755b39446a833c3874f5b1236858b32282c71bebfe77d",
+    "docs/RESULTS.md": "012dcba3e8f7caa25c42c512740f9c0cf9fefcd2ac8fe5bd574ab2e9096ed962",
     "docs/ROADMAP.md": "daa7a3b7b95e30d59f23b5b79399bf6c8411d8ff77de4b8319ccfbf8b65b700d",
     "docs/STATUS.md": "099164b8e68e526ab3c9ea3001ebc61d06e6b10fec9b17c657ca80fd68cb8b08",
     "docs/STREAMING.md": "282c228aed0d129d127257ae596e5b3d4afbf6e6ff2f86a41340b260ea3a4f26",
@@ -25,7 +25,7 @@
     "requirements-kernels.txt": "0b4d4679468996f1f926ba1da36f71a0321635d4815ada57232a37b72d41c662",
     "requirements-ops.txt": "b8288242384ac9c17b8a09409fd4ddaa92136b562cbdafcca8fe61f49237cf59",
     "requirements-tracking.txt": "4b0f99e4b288be123f180c66e525fca028ec30899d7dcf64f8ec023903143d4e",
-    "requirements.txt": "130230bd3d83aad4755afd2532110f764584b229b3017370517d1028521d1a80",
+    "requirements.txt": "935746874b640f9723f6e099aa5ee421cec9bf004fd8ff1be3808eb17084afb0",
     "scripts/build_runtime.py": "21935d561113c224d9dbd795eb670bf15cd22811c5d2d3fdc15a68889e81219b",
     "scripts/check_deployment.py": "58646192cbe5e4f2883c097cb35e23a821a01f341340b02cbbd4459b1ffd6aa8",
     "scripts/check_kernels.py": "9504a54c4d066b9ec818ab92810fbb9367897549bffd3a892368a6716c3d128a",
@@ -80,7 +80,8 @@
     "triton_interpreter": "passed",
     "compose": "passed",
     "kubernetes": "passed",
-    "cuda_training": "passed"
+    "cuda_training": "passed",
+    "declared_dependency_ddp_regression_python312": "passed"
   },
   "scope": "Executed checks apply to the declared fixtures and hardware; docs/STATUS.md records open release gates."
 }
