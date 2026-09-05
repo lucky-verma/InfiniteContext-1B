@@ -1,9 +1,0 @@
-project_name: "InfiniteContext-1B"
-languages:
-- python
-encoding: "utf-8"
-ignore_all_files_in_gitignore: true
-read_only: false
-excluded_tools: []
-included_optional_tools: []
-ignored_paths: []

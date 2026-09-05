@@ -221,3 +221,6 @@ __marimo__/
 .claude/backups/
 CLAUDE.local.md
 .ccmanager.json
+
+# Editor-local configuration
+.cursor/
