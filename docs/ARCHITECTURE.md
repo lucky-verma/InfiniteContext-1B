@@ -121,6 +121,12 @@ rollback, and autoscaling. Prometheus/Grafana expose latency, errors, queue
 pressure, model/cache resources, and device utilization. HPA behavior must be
 validated against the selected scaling signal and available capacity.
 
+The planned cluster path includes CoreDNS, an enforced network policy using
+one CNI, Gateway API/TLS routing, and Argo CD reconciliation of versioned
+manifests. Session ownership, routing, storage access, and drain/recovery checks
+precede horizontal scaling. The [operations milestones](ROADMAP.md#infrastructure-and-operations-milestones)
+define qualification evidence and conditional Rook/Ceph and Twingate adoption.
+
 Keep the serving surface authenticated and appropriately isolated when
 exposed beyond a local development machine. Protect model/artifact integrity,
 secrets, and private inputs. Record the deployment, operational failure tests,

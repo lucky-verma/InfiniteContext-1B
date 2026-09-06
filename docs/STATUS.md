@@ -20,13 +20,18 @@ the 1B model is untrained, and several scale/integration gates remain open.
 | Model lifecycle | Offline W&B, local MLflow, checkpoint/evaluation identity, registration, alias promotion, HTTP prediction, rollback/reload | Real-model acceptance thresholds, artifact storage/security operations, deployed model reload orchestration |
 | Native serving | Pinned artifact verification, authentication, single-slot ownership, cancellation/retry, bounded requests | Multi-session admission, fairness, load/overload and batching studies |
 | Containers and monitoring | Non-root/read-only Compose deployment, authentication denial, restart replay, authenticated Prometheus scrape | GPU image qualification, durable metrics, Grafana rendering and alert/load tests |
-| Kubernetes | Local kind StatefulSet, PVC-backed pod-replacement replay, observed bad rollout and successful rollback | K3s, GPU scheduling, multi-node storage/failure, network-policy enforcement, and HPA with session routing |
+| Kubernetes | Local kind StatefulSet, PVC-backed pod-replacement replay, observed bad rollout and successful rollback | K3s, GPU scheduling, multi-node storage/failure, CoreDNS fault diagnosis, CNI/network-policy enforcement, Gateway API/TLS, and HPA with session routing |
+| GitOps delivery | No implementation or qualification evidence | Argo CD reconciliation, drift repair, failed-release recovery through Git, and persistent-state compatibility |
 | Host/cluster provisioning | Ansible and SLURM launch recipes; syntax checks | Actual host provisioning/idempotence, NVIDIA Container Toolkit/driver lifecycle, and SLURM allocation |
 | vLLM | Integration requirements and environment boundary documented | Custom MLA model/weight adapter and verified batching/session integration |
 
 [RESULTS.md](RESULTS.md) links the raw evidence. [VALIDATION.md](VALIDATION.md)
 remains the release contract; a passing synthetic pipeline does not close its
 quality, scale, or production-operation gates.
+
+The [infrastructure milestones](ROADMAP.md#infrastructure-and-operations-milestones)
+remain planned qualification work. Rook/Ceph and Twingate are conditional on the
+declared deployment's storage and private-access needs.
 
 ## Next decisive execution
 

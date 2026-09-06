@@ -12,6 +12,11 @@
 | Serving | Model identity, request/token limits, concurrency, cancellation, errors, overload, health/readiness, and streaming completion semantics |
 | Operations | Provisioning, deployment, restart, model promotion/rollback, monitoring, and autoscaling behavior on actual infrastructure |
 
+Operations also requires the [infrastructure milestones](ROADMAP.md#infrastructure-and-operations-milestones):
+DNS fault recovery, enforced network isolation, authenticated gateway routing,
+GitOps drift/release recovery, and session-safe scaling. Qualify the chosen CNI;
+Rook/Ceph and Twingate checks apply only when those products are adopted.
+
 ## Benchmark contract
 
 Record code, runtime, model/revision, quantization, data/workload, hardware,
